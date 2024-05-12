@@ -22,7 +22,7 @@ Planning the layout of your base in Screeps might seem unusual at first, but itâ
 
 7. **Position Labs**: Identify 10 suitable tiles meeting specific criteria, ensuring that there are two source labs within range 2 of every other lab.
 
-8. **Establish Infrastructure**: Lay down roads from storage to energy sources and minerals. Place a container and a link at each source, and a container and an extractor at the mineral deposit.
+8. **Establish Infrastructure**: Lay down roads from storage to energy sources and minerals. Place a container and a link at each source, and a container and an extractor at the mineral.
 
 9. **Optimize Ramparts**: Utilize the minimum cut algorithm to determine optimal rampart positions, then connect them with roads.
 
