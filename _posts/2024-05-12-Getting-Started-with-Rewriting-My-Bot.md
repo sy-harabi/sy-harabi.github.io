@@ -1,8 +1,8 @@
 ---
 layout: single
 title: "Getting Started with Rewriting My Bot"
-toc:true
-toc_stickey:true
+toc: true
+toc_stickey: true
 ---
 
 ## Why I Started to Rewrite and My Goals
