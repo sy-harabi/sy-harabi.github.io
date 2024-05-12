@@ -4,6 +4,8 @@ title: "Automating Base Planning in Screeps – A Step-by-Step Guide"
 
 toc: true
 toc_sticky: true
+
+comments: true
 ---
 ## Why Base Planning?
 
