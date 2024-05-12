@@ -12,7 +12,7 @@ Planning the layout of your base in Screeps might seem unusual at first, but itâ
 ## The Process
 
 1. **Utilize Distance Transform**: Start by employing the distance transform algorithm to identify open spaces in the room. Typically, my bot requires a 5x5 square to begin, so I target positions with a distance of 3 or larger. Some bots, especially those employing bunker-style base planners, may require squares larger than 10x10. Plan ahead for the desired size of your base.
-
+![image1](/assets/img/2024.05.12.base-planner/1. distance transform.png
 2. **Select Starting Position**: Choose an open area close to both the controller and energy sources. Proximity to the controller is critical, especially if significant energy upgrades are anticipated. Distance to energy sources is less crucial since transportation from source to storage is capped at 10 energy per tick.
 
 3. **Place Core Structures**: Begin by placing core structures such as spawn, storage, and terminal. I surround the starting position with core structures using a 5x5 stamp for efficiency. Some bots utilize a stamp called "fast filler" to quickly fill extensions. The choice of design is up to you!
