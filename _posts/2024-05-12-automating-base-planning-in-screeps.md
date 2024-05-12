@@ -1,5 +1,7 @@
-# Automating Base Planning in Screeps
-
+---
+layout: post
+title: "Automating Base Planning in Screeps"
+---
 Planning the layout of your base in Screeps might seem odd at first, but it’s a crucial step in optimizing your energy economy and overall bot efficiency. Let’s delve into why base planning is essential and how you can automate the process.
 
 ## Why Base Planning?
