@@ -3,7 +3,7 @@ layout: single
 title:  "Getting Started with Rewriting My Bot"
 ---
 
-# Getting Started with Rewriting My Bot
+# Why I Started to Rewrite and My Goals
 
 I first started playing Screeps in August 2022, so it’s been about 2 years since then. Up until now, I've focused on writing my own bot, which has been a fun and wonderful experience. However, I've recently felt the need to entirely rewrite my bot.
 
