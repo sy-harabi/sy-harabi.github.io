@@ -18,7 +18,7 @@ Planning the layout of your base in Screeps might seem unusual at first, but itâ
 
 5. **Implement Floodfill Algorithm**: Utilize the floodfill algorithm to categorize tiles by their accessibility. Lower numbers indicate proximity to core structures.
 
-6. **Allocate Tile Usage**: Assign 79 tiles for essential structures such as extensions, labs, towers, factory, nuker, and observer. I personally prefer a grid layout similar to the "commie bot."
+6. **Allocate Tile Usage**: Assign tiles for essential structures such as extensions, labs, towers, factory, nuker, and observer. I personally prefer a grid layout similar to the "commie bot."
 
 7. **Position Labs**: Identify 10 suitable tiles meeting specific criteria, ensuring that there are two source labs within range 2 of every other lab.
 
