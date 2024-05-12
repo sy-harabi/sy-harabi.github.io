@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Automating Base Planning in Screeps – A Step-by-Step Guide"
 
 toc: true
