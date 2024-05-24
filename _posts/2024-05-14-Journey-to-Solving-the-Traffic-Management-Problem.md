@@ -1,13 +1,12 @@
 ---
 layout: single
-title: "Automating Base Planning in Screeps – A Step-by-Step Guide"
+title: "Journey to Solving the Traffic Management Problem"
 
 toc: true
 toc_sticky: true
 
 comments: true
 ---
-# Journey to Solving the Traffic Management Problem
 ## What is traffic management in Screeps?
 Movement is one of the significant challenges in Screeps. In fact, the official Discord has a dedicated pathfinding channel. Traffic management, a critical aspect of movement control, refers to the efficient control and movement of creeps to prevent congestion and collisions. Without proper management, creeps can get stuck or move slowly, severely hindering their efficiency.
 ## Common methods to manage traffic
