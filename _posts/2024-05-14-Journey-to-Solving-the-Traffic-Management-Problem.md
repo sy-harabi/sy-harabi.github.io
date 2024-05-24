@@ -60,4 +60,7 @@ Function getPossiblePositions(creep):
     Add valid adjacent positions to possiblePositions
     Return possiblePositions
 ```
+## Git repository of my solution
+You can read or use my code if you want to try. My screeps traffic manager is available [here]([https://github.com/sy-harabi/Screeps-Traffic-Manager])
+
 
