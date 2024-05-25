@@ -20,7 +20,7 @@ This solution leverages graph theory. Imagine two sets of vertices: one represen
 We start by connecting each creep to its current position with edges. For each creep with a move intent, we search for augmenting paths in our graph. If a path increases the number of fulfilled intents, we send flow along that path. We use depth-first search (DFS) to explore these paths, scoring each path as follows: +1 if it connects a creep to its intended position, and -1 if it cancels an existing connection. After iterating through all creeps, the results indicate where each creep should be in the next tick.
 
 **WARNING:**
-I thought this method ensures that we can maximize the number of creeps reaching their intended positions while adhering to the given constraints. But it turned out that it does not. To ensure that, we have to add while loop to check it's really an optimal solution. I'm not certain that will be worth it considering it will use more CPU, I'll leave the method unchanged for a while.
+I thought this method ensures that we can maximize the number of creeps reaching their intended positions while adhering to the given constraints. But it turned out that it does not. To ensure that, we have to add while loop to check it's really an optimal solution. I'm not certain that will be worth it considering it will use more CPU. So I'll leave the method unchanged for a while.
 
 ## Further Explanation of the Traffic Management Algorithm with an Example
 **Note:** You can skip this part if it seems too complicated. It's an optional detailed explanation of the algorithm.
