@@ -22,14 +22,18 @@ We start by connecting each creep to its current position with edges. For each c
 **Note:** You can skip this part if it seems too complicated. It's an optional detailed explanation of the algorithm.
 
 Suppose we have a situation like the picture below. Here, `A`, `B`, `C`, and `D` are creeps, and `a`, `b`, `c`, `d`, `e`, and `f` are positions.
+
 ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/4355a5c2-872b-4dbf-b661-bbf940f68dff)
+
 - Creep `B` wants to move to `a`
 - Creep `C` wants to move to `b`
 - Creep `D` wants to move to `a`
 - Creep `A` doesn't care about its movement.
 
 We can represent this situation with the following graph:
+
 ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/e8033730-429c-4719-9960-c07822149a42)
+
 - **Blue edges** indicate current positions
 - **Red edges** indicate intended positions
 - **Black edges** indicate possible positions
@@ -43,6 +47,7 @@ Our task is to match each creep to a position, satisfying the following conditio
 Our goal is to maximize the number of creeps matched to their intended positions.
 
 Here is a desired solution, with **green edges** representing the solution:
+
 ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/c8f3553f-5ea1-4225-8fd7-2294b7c59519)
 
 ### Finding the Solution
@@ -51,7 +56,7 @@ Here is a desired solution, with **green edges** representing the solution:
 
 1. **Start with Creep `B`** (since `A` has no intended position).
     - Delete the blue edge between `B` and `b`, then mark it as a black edge.
-    - ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/879f0017-34d7-4cc6-9142-ee1b5929de7d)
+   ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/879f0017-34d7-4cc6-9142-ee1b5929de7d)
 
     - Find a path following these rules:
         1. You can choose a red or black edge when moving from a creep to a position.
