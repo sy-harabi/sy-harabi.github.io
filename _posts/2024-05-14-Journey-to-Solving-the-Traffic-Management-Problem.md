@@ -76,7 +76,7 @@ Here is a desired solution, with **green edges** representing the solution:
       
     ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/62261b25-7d04-4c9e-af34-ca19f44cd8f0)
 
-    - Calculate the total score of the path. If it’s positive, apply the path to the graph; if not, ignore the path and revert the graph. The score here is +1, so we apply the path. Convert the edges along the path to green(when it was red before) or blue(when it was blue or black before) edges when it's from a creep to a position. When it's from a position to a creep, convert it back to the red or black edges accordingly.
+    - Calculate the total score of the path. If it’s positive, apply the path to the graph; if not, ignore the path and revert the graph. The score here is +1, so we apply the path. Convert the edges along the path to green(when it was red before) or blue(when it was blue or black before) edges when it's from a creep to a position. When it's from a position to a creep, convert it back to the red(when it was red before) or black(for the rest) edges accordingly.
       
     ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/19f52d64-1b21-451a-9dc7-52fa88a6d209)
 
