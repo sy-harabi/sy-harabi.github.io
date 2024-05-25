@@ -18,6 +18,10 @@ I found the common methods unsatisfactory due to the numerous edge cases they cr
 This solution leverages graph theory. Imagine two sets of vertices: one representing creeps and the other representing room positions. We connect these vertices with edges, indicating a creep's potential move or stay. There are two types of creeps: those intending to move to an adjacent tile and those without such an intent. Our goal is to maximize the number of fulfilled move intents.
 ## How the method works
 We start by connecting each creep to its current position with edges. For each creep with a move intent, we search for augmenting paths in our graph. If a path increases the number of fulfilled intents, we send flow along that path. We use depth-first search (DFS) to explore these paths, scoring each path as follows: +1 if it connects a creep to its intended position, and -1 if it cancels an existing connection. After iterating through all creeps, the results indicate where each creep should be in the next tick.
+
+**WARNING:**
+I thought this method ensures that we can maximize the number of creeps reaching their intended positions while adhering to the given constraints. But it turned out that it does not. To ensure that, we have to add while loop to check it's really an optimal solution. I'm not certain that will be worth it considering it will use more CPU, I'll leave the method unchanged for a while.
+
 ## Further Explanation of the Traffic Management Algorithm with an Example
 **Note:** You can skip this part if it seems too complicated. It's an optional detailed explanation of the algorithm.
 
@@ -110,8 +114,6 @@ Here is a desired solution, with **green edges** representing the solution:
 ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/274809d2-a9ea-4e74-afab-f8cf430b45db)
 
 - **Result:** Move `Creep A` to `e`, `B` to `a`, `C` to `b`, and `D` stays in place (`d`).
-
-**WARNKING:** I thought this solution ensures that we maximize the number of creeps reaching their intended positions while adhering to the given constraints. But it turned out that it does not. To ensure that, we have to go back to the first, and do the whole process again until it cannot find any path with positive score. It's easy to modify it like that, but I'm not certain it's worth to spend more CPU, so for now I'll leave the code unchanged.
 
 ## Pseudocode
 ```
