@@ -60,7 +60,7 @@ Here is a desired solution, with **green edges** representing the solution:
    ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/879f0017-34d7-4cc6-9142-ee1b5929de7d)
 
     - Find a path following these rules:
-        1. You can choose a red or black edge when moving from a creep to a position.
+        1. You must choose a red or black edge when moving from a creep to a position.
         2. You must choose a blue or green edge when moving from a position to a creep.
         3. Visit each vertex (either creep or position) only once.
         4. When choosing a red edge, add +1 to the score.
