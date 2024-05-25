@@ -18,6 +18,67 @@ I found the common methods unsatisfactory due to the numerous edge cases they cr
 This solution leverages graph theory. Imagine two sets of vertices: one representing creeps and the other representing room positions. We connect these vertices with edges, indicating a creep's potential move or stay. There are two types of creeps: those intending to move to an adjacent tile and those without such an intent. Our goal is to maximize the number of fulfilled move intents.
 ## How the algorithm works
 We start by connecting each creep to its current position with edges. For each creep with a move intent, we search for augmenting paths in our graph. If a path increases the number of fulfilled intents, we send flow along that path. We use depth-first search (DFS) to explore these paths, scoring each path as follows: +1 if it connects a creep to its intended position, and -1 if it cancels an existing connection. After iterating through all creeps, the results indicate where each creep should be in the next tick.
+## Further Explanation of the Traffic Management Algorithm with an Example
+**Note:** You can skip this part if it seems too complicated. It's an optional detailed explanation of the algorithm.
+Suppose we have a situation like the picture below. Here, `A`, `B`, `C`, and `D` are creeps, and `a`, `b`, `c`, `d`, `e`, and `f` are positions.
+
+- Creep `B` wants to move to `a`
+- Creep `C` wants to move to `b`
+- Creep `D` wants to move to `a`
+- Creep `A` doesn't care about its movement.
+
+We can represent this situation with the following graph:
+
+- **Blue edges** indicate current positions
+- **Red edges** indicate intended positions
+- **Black edges** indicate possible positions
+
+Our task is to match each creep to a position, satisfying the following conditions:
+
+1. Each creep must be matched to one of the current, intended, or possible positions.
+2. Each creep must be matched to exactly one position.
+3. No two creeps can be matched to the same position.
+
+Our goal is to maximize the number of creeps matched to their intended positions.
+
+Here is a desired solution, with **green edges** representing the solution:
+
+### Finding the Solution
+
+#### Step-by-Step Algorithm:
+
+1. **Start with Creep `B`** (since `A` has no intended position).
+    - Delete the blue edge between `B` and `b`, then mark it as a black edge.
+    - Find a path following these rules:
+        1. You can choose a red or black edge when moving from a creep to a position.
+        2. You must choose a blue or green edge when moving from a position to a creep.
+        3. Visit each vertex (either creep or position) only once.
+        4. When choosing a red edge, add +1 to the score.
+        5. When choosing a green edge, subtract -1 from the score.
+        6. If you arrive at a position without a blue or green edge, return the path.
+
+2. **Finding Paths:**
+    - Choose the edge from `B` to `a` and get a score of +1.
+    - Next, choose `A` and then `b`. Since `b` has no blue or green edge, return this path.
+    - Calculate the total score of the path. If it’s positive, apply the path to the graph; if not, ignore the path and revert the graph. The score here is +1, so we apply the path. Convert the edges along the path to green edges and adjust the red and black edges accordingly.
+
+3. **Update the Graph:**
+    - The updated graph shows that `B` is now matched to its intended position `a`.
+
+4. **Repeat for Remaining Creeps:**
+    - Now, process `C`. Start from `C` to `b`, then go to `A`.
+        - At `A`, try different positions (`a`, `d`, `e`) until you find a successful path. In this case, `A` to `e` works.
+        - Apply this path, making `C` happy by matching it to `b`.
+    
+    - Process `D` next. Start from `D` to find possible paths.
+        - If the path results in a negative score, revert and end the process. Here, the path has a score of -1, so we do not apply it.
+
+### Final Solution:
+
+- **Result:** Move `Creep A` to `e`, `B` to `a`, `C` to `b`, and `D` stays in place (`d`).
+
+This solution ensures that we maximize the number of creeps reaching their intended positions while adhering to the given constraints.
+
 ## Pseudocode
 ```
 Declare movementMap
