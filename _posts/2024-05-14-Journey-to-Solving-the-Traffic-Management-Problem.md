@@ -65,7 +65,7 @@ Here is a desired solution, with **green edges** representing the solution:
         3. Visit each vertex (either creep or position) only once.
         4. When choosing a red edge, add +1 to the score.
         5. When choosing a green edge, subtract -1 from the score.
-        6. If you arrive at a position without a blue or green edge, return the path.
+        6. If you arrive at a position which don't have blue nor green edge, return the path.
 
 2. **Finding Paths:**
     - Choose the edge from `B` to `a` and get a score of +1.
