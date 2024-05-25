@@ -16,7 +16,7 @@ The most intuitive solution is swapping and pushing. This means if a creep is bl
 I found the common methods unsatisfactory due to the numerous edge cases they created, especially in extreme situations. Each new edge case required additional handling, complicating the solution. I aimed to develop a general solution to this problem. Through algorithmic research, I discovered that the Bipartite Matching Problem (BMP) could help solve this issue. Essentially, traffic management involves assigning each creep to a specific position for the next tick. By tweaking the Ford-Fulkerson method, I successfully addressed the traffic management problem.
 ## Basic Idea
 This solution leverages graph theory. Imagine two sets of vertices: one representing creeps and the other representing room positions. We connect these vertices with edges, indicating a creep's potential move or stay. There are two types of creeps: those intending to move to an adjacent tile and those without such an intent. Our goal is to maximize the number of fulfilled move intents.
-## How the algorithm works
+## How the method works
 We start by connecting each creep to its current position with edges. For each creep with a move intent, we search for augmenting paths in our graph. If a path increases the number of fulfilled intents, we send flow along that path. We use depth-first search (DFS) to explore these paths, scoring each path as follows: +1 if it connects a creep to its intended position, and -1 if it cancels an existing connection. After iterating through all creeps, the results indicate where each creep should be in the next tick.
 ## Further Explanation of the Traffic Management Algorithm with an Example
 **Note:** You can skip this part if it seems too complicated. It's an optional detailed explanation of the algorithm.
@@ -111,7 +111,7 @@ Here is a desired solution, with **green edges** representing the solution:
 
 - **Result:** Move `Creep A` to `e`, `B` to `a`, `C` to `b`, and `D` stays in place (`d`).
 
-This solution ensures that we maximize the number of creeps reaching their intended positions while adhering to the given constraints.
+**WARNKING:** I thought this solution ensures that we maximize the number of creeps reaching their intended positions while adhering to the given constraints. But it turned out that it does not. To ensure that, we have to go back to the first, and do the whole process again until it cannot find any path with positive score. It's easy to modify it like that, but I'm not certain it's worth to spend more CPU, so for now I'll leave the code unchanged.
 
 ## Pseudocode
 ```
