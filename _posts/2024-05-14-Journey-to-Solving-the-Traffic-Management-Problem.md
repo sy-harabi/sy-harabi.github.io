@@ -91,17 +91,17 @@ Here is a desired solution, with **green edges** representing the solution:
       
     ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/d2639755-01a1-484b-bb05-ce5aa708439c)
    
-        - At `A`, try different positions (`a`, `d`, `e`) until you find a successful path. In this case, `A` to `e` works.
+    - At `A`, try different positions (`a`, `d`, `e`) until you find a successful path. In this case, `A` to `e` works.
    
     ![image](https://github.com/sy-harabi/sy-harabi.github.io/assets/71678452/d0ed12ef-08f4-4800-acf8-b37443d466b3)
    
-        - Apply this path, making `C` happy by matching it to `b`.
+    - Apply this path, making `C` happy by matching it to `b`.
     
     - Process `D` next. Start from `D` to find possible paths.
       
     ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/47c78c5c-b1e0-44e5-83e1-3f5bf75b23a3)
-   
-        - If the path results in a negative score, revert and end the process. Here, the path has a score of -1, so we do not apply it.
+
+    - If the path results in a negative score, revert and end the process. Here, the path has a score of -1, so we do not apply it.
 
 ### Final Solution:
 
