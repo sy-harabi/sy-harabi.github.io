@@ -96,6 +96,8 @@ Here is a desired solution, with **green edges** representing the solution:
     ![image](https://github.com/sy-harabi/sy-harabi.github.io/assets/71678452/d0ed12ef-08f4-4800-acf8-b37443d466b3)
    
     - Apply this path, making `C` happy by matching it to `b`.
+      
+    ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/274809d2-a9ea-4e74-afab-f8cf430b45db)
     
     - Process `D` next. Start from `D` to find possible paths.
       
