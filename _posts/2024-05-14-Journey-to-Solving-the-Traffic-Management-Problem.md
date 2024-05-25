@@ -56,6 +56,7 @@ Here is a desired solution, with **green edges** representing the solution:
 
 1. **Start with Creep `B`** (since `A` has no intended position).
     - Delete the blue edge between `B` and `b`, then mark it as a black edge.
+  
    ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/879f0017-34d7-4cc6-9142-ee1b5929de7d)
 
     - Find a path following these rules:
@@ -68,29 +69,44 @@ Here is a desired solution, with **green edges** representing the solution:
 
 2. **Finding Paths:**
     - Choose the edge from `B` to `a` and get a score of +1.
+      
     ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/bdf37a14-954d-4670-bc1f-42db558f50df)
+   
     - Next, choose `A` and then `b`. Since `b` has no blue or green edge, return this path.
+      
     ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/62261b25-7d04-4c9e-af34-ca19f44cd8f0)
+
     - Calculate the total score of the path. If it’s positive, apply the path to the graph; if not, ignore the path and revert the graph. The score here is +1, so we apply the path. Convert the edges along the path to green edges when it's from a creep to a position. When it's from a position to a creep, convert it back to the red or black edges accordingly.
+      
     ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/19f52d64-1b21-451a-9dc7-52fa88a6d209)
 
-3. **Update the Graph:**
+4. **Update the Graph:**
+   
     ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/0cb63d83-3703-4d9b-ae5b-f59a78a6982e)
+   
     - The updated graph shows that `B` is now matched to its intended position `a`.
 
-5. **Repeat for Remaining Creeps:**
+6. **Repeat for Remaining Creeps:**
     - Now, process `C`. Start from `C` to `b`, then go to `A`.
+      
     ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/d2639755-01a1-484b-bb05-ce5aa708439c)
+   
         - At `A`, try different positions (`a`, `d`, `e`) until you find a successful path. In this case, `A` to `e` works.
+   
     ![image](https://github.com/sy-harabi/sy-harabi.github.io/assets/71678452/d0ed12ef-08f4-4800-acf8-b37443d466b3)
+   
         - Apply this path, making `C` happy by matching it to `b`.
     
     - Process `D` next. Start from `D` to find possible paths.
+      
     ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/47c78c5c-b1e0-44e5-83e1-3f5bf75b23a3)
+   
         - If the path results in a negative score, revert and end the process. Here, the path has a score of -1, so we do not apply it.
 
 ### Final Solution:
+
 ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/274809d2-a9ea-4e74-afab-f8cf430b45db)
+
 - **Result:** Move `Creep A` to `e`, `B` to `a`, `C` to `b`, and `D` stays in place (`d`).
 
 This solution ensures that we maximize the number of creeps reaching their intended positions while adhering to the given constraints.
