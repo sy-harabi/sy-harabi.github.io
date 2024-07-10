@@ -36,7 +36,7 @@ Suppose we have a situation like the picture below. Here, `A`, `B`, `C`, and `D`
 
 We can represent this situation with the following graph:
 
-![image](https://github.com/mmistakes/minimal-mistakes/assets/71678452/e8facfa1-8892-49a1-83f3-d8c7c99a1491)
+![image](https://github.com/mmistakes/minimal-mistakes/assets/71678452/6c06979a-ffe3-4e9c-bf27-36539dc554fd)
 
 - **Blue edges** indicate current positions
 - **Red edges** indicate intended positions
@@ -52,7 +52,7 @@ Our goal is to maximize the number of creeps matched to their intended positions
 
 Here is a desired solution, with **green edges** representing the solution:
 
-![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/c8f3553f-5ea1-4225-8fd7-2294b7c59519)
+![image](https://github.com/mmistakes/minimal-mistakes/assets/71678452/e8facfa1-8892-49a1-83f3-d8c7c99a1491)
 
 ### Finding the Solution
 
