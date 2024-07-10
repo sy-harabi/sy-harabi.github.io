@@ -27,7 +27,7 @@ I thought this method ensures that we can maximize the number of creeps reaching
 
 Suppose we have a situation like the picture below. Here, `A`, `B`, `C`, and `D` are creeps, and `a`, `b`, `c`, `d`, `e`, and `f` are positions.
 
-![image](https://github.com/mmistakes/minimal-mistakes/assets/71678452/20899770-2bd0-4ed2-ad8d-7a787b32372a){width="50%" height="50%"}
+![image](https://github.com/mmistakes/minimal-mistakes/assets/71678452/20899770-2bd0-4ed2-ad8d-7a787b32372a){: width="30%" height="30%"}
 
 - Creep `B` wants to move to `a`
 - Creep `C` wants to move to `b`
