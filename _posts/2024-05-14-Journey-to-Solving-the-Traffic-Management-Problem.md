@@ -9,7 +9,7 @@ comments: true
 ---
 ## What is traffic management in Screeps?
 Movement is one of the significant challenges in Screeps. In fact, the official Discord has a dedicated pathfinding channel. Traffic management, a critical aspect of movement control, refers to the efficient control and movement of creeps to prevent congestion and collisions. Without proper management, creeps can get stuck or move slowly, severely hindering their efficiency.
-![1  Traffic](https://github.com/sy-harabi/screeps_harabi/assets/71678452/c84e2ae4-bd76-4e51-ae51-67eae6e6e6dd)
+![1  Traffic](https://github.com/mmistakes/minimal-mistakes/assets/71678452/90a2464e-9739-49e1-8cc0-3803d767a8fd)
 ## Common methods to manage traffic
 The most intuitive solution is swapping and pushing. This means if a creep is blocking another creep's path, you swap their positions or push the blocking creep out of the way. While effective in many cases, this method can fail in crowded areas, creating edge cases. Advanced techniques to handle these scenarios include prioritizing creeps and recursive shoving, which involves pushing a chain of creeps until one is moved to an empty tile.
 ## What’s different about my solution?
@@ -27,7 +27,7 @@ I thought this method ensures that we can maximize the number of creeps reaching
 
 Suppose we have a situation like the picture below. Here, `A`, `B`, `C`, and `D` are creeps, and `a`, `b`, `c`, `d`, `e`, and `f` are positions.
 
-![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/4355a5c2-872b-4dbf-b661-bbf940f68dff)
+![image](https://github.com/mmistakes/minimal-mistakes/assets/71678452/20899770-2bd0-4ed2-ad8d-7a787b32372a)
 
 - Creep `B` wants to move to `a`
 - Creep `C` wants to move to `b`
