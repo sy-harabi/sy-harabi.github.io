@@ -92,7 +92,7 @@ Here is a desired solution, with **green edges** representing the solution:
 6. **Repeat for Remaining Creeps:**
     - Now, process `C`. Start from `C` to `b`, then go to `A`.
 
-<img src = "https://github.com/user-attachments/assets/2fb21c16-3eb1-422f-9544-a7ebd5ecebb4" style = "width:50%>
+<img src = "https://github.com/user-attachments/assets/2fb21c16-3eb1-422f-9544-a7ebd5ecebb4" style = "width:50%">
    
     - At `A`, try different positions (`a`, `d`, `e`) until you find a successful path. In this case, `A` to `e` works.
    
