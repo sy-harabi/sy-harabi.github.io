@@ -60,8 +60,7 @@ Here is a desired solution, with **green edges** representing the solution:
 
 1. **Start with Creep `B`** (since `A` has no intended position).
     - Delete the blue edge between `B` and `b`, then mark it as a black edge.
-
-  <img src = "https://github.com/user-attachments/assets/89f0f0db-5720-4d6b-bd02-2a2bf0292814" style = "width:50%">
+    <img src = "https://github.com/user-attachments/assets/89f0f0db-5720-4d6b-bd02-2a2bf0292814" style = "width:50%">
 
     - Find a path following these rules:
         1. You must choose a red or black edge when moving from a creep to a position.
