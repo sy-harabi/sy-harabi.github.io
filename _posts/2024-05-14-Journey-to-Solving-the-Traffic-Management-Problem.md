@@ -60,7 +60,8 @@ Here is a desired solution, with **green edges** representing the solution:
 
 1. **Start with Creep `B`** (since `A` has no intended position).
     - Delete the blue edge between `B` and `b`, then mark it as a black edge.
-<img src = "https://github.com/user-attachments/assets/89f0f0db-5720-4d6b-bd02-2a2bf0292814" style = "width:50%">
+      
+      <img src = "https://github.com/user-attachments/assets/89f0f0db-5720-4d6b-bd02-2a2bf0292814" style = "width:50%">
 
     - Find a path following these rules:
         1. You must choose a red or black edge when moving from a creep to a position.
@@ -72,10 +73,10 @@ Here is a desired solution, with **green edges** representing the solution:
 
 3. **Finding Paths:**
     - Choose the edge from `B` to `a` and get a score of +1.
-<img src = "https://github.com/user-attachments/assets/276aeb22-6e7b-49fe-8c44-5dd53fd9dcf8" style = "width:50%">
+      <img src = "https://github.com/user-attachments/assets/276aeb22-6e7b-49fe-8c44-5dd53fd9dcf8" style = "width:50%">
    
     - Next, choose `A` and then `b`. Since `b` has no blue or green edge, return this path.
-<img src = "https://github.com/user-attachments/assets/333ed95c-08f4-4e6a-894d-d0eabcecd428" style = "width:50%">
+      <img src = "https://github.com/user-attachments/assets/333ed95c-08f4-4e6a-894d-d0eabcecd428" style = "width:50%">
 
     - Calculate the total score of the path. If it’s positive, apply the path to the graph; if not, ignore the path and revert the graph. The score here is +1, so we apply the path.
 
