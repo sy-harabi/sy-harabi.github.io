@@ -29,8 +29,6 @@ Suppose we have a situation like the picture below. Here, `A`, `B`, `C`, and `D`
 
 <img src = "https://github.com/mmistakes/minimal-mistakes/assets/71678452/20899770-2bd0-4ed2-ad8d-7a787b32372a" style = "width:50%">
 
-![image](https://github.com/mmistakes/minimal-mistakes/assets/71678452/20899770-2bd0-4ed2-ad8d-7a787b32372a){: width="30%" height="30%"}
-
 - Creep `B` wants to move to `a`
 - Creep `C` wants to move to `b`
 - Creep `D` wants to move to `a`
@@ -38,7 +36,7 @@ Suppose we have a situation like the picture below. Here, `A`, `B`, `C`, and `D`
 
 We can represent this situation with the following graph:
 
-![image](https://github.com/mmistakes/minimal-mistakes/assets/71678452/6c06979a-ffe3-4e9c-bf27-36539dc554fd){: width="50%"}
+<img src = "https://github.com/mmistakes/minimal-mistakes/assets/71678452/6c06979a-ffe3-4e9c-bf27-36539dc554fd" style = "width:50%">
 
 - **Blue edges** indicate current positions
 - **Red edges** indicate intended positions
@@ -54,7 +52,7 @@ Our goal is to maximize the number of creeps matched to their intended positions
 
 Here is a desired solution, with **green edges** representing the solution:
 
-![image](https://github.com/mmistakes/minimal-mistakes/assets/71678452/e8facfa1-8892-49a1-83f3-d8c7c99a1491){: width="50%"}
+<img src = "https://github.com/mmistakes/minimal-mistakes/assets/71678452/e8facfa1-8892-49a1-83f3-d8c7c99a1491" style = "width:50%">
 
 ### Finding the Solution
 
