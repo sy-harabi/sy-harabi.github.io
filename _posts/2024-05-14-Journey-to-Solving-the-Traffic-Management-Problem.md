@@ -60,7 +60,8 @@ Here is a desired solution, with **green edges** representing the solution:
 
 1. **Start with Creep `B`** (since `A` has no intended position).
     - Delete the blue edge between `B` and `b`, then mark it as a black edge.
-    <img src = "https://github.com/user-attachments/assets/89f0f0db-5720-4d6b-bd02-2a2bf0292814" style = "width:50%">
+ 
+<img src = "https://github.com/user-attachments/assets/89f0f0db-5720-4d6b-bd02-2a2bf0292814" style = "width:50%">
 
     - Find a path following these rules:
         1. You must choose a red or black edge when moving from a creep to a position.
@@ -72,34 +73,38 @@ Here is a desired solution, with **green edges** representing the solution:
 
 3. **Finding Paths:**
     - Choose the edge from `B` to `a` and get a score of +1.
-   <img src = "https://github.com/user-attachments/assets/276aeb22-6e7b-49fe-8c44-5dd53fd9dcf8" style = "width:50%">
+    - 
+<img src = "https://github.com/user-attachments/assets/276aeb22-6e7b-49fe-8c44-5dd53fd9dcf8" style = "width:50%">
    
     - Next, choose `A` and then `b`. Since `b` has no blue or green edge, return this path.
-   <img src = "https://github.com/user-attachments/assets/333ed95c-08f4-4e6a-894d-d0eabcecd428" style = "width:50%">
+    - 
+<img src = "https://github.com/user-attachments/assets/333ed95c-08f4-4e6a-894d-d0eabcecd428" style = "width:50%">
 
     - Calculate the total score of the path. If it’s positive, apply the path to the graph; if not, ignore the path and revert the graph. The score here is +1, so we apply the path.
 
 4. **Update the Graph:**
    - Convert the edges along the path to green(when it was red before) or blue(when it was blue or black before) edges when it's from a creep to a position. When it's from a position to a creep, convert it back to the red(when it was red before) or black(for the rest) edges accordingly.
-   <img src = "https://github.com/user-attachments/assets/f62d69b2-dee6-415c-951f-35acd26b926e" style = "width:50%">
+
+<img src = "https://github.com/user-attachments/assets/f62d69b2-dee6-415c-951f-35acd26b926e" style = "width:50%">
    
     - The updated graph shows that `B` is now matched to its intended position `a`.
 
 6. **Repeat for Remaining Creeps:**
     - Now, process `C`. Start from `C` to `b`, then go to `A`.
-   <img src = "https://github.com/user-attachments/assets/2fb21c16-3eb1-422f-9544-a7ebd5ecebb4" style = "width:50%">
+
+<img src = "https://github.com/user-attachments/assets/2fb21c16-3eb1-422f-9544-a7ebd5ecebb4" style = "width:50%; align:center">
    
     - At `A`, try different positions (`a`, `d`, `e`) until you find a successful path. In this case, `A` to `e` works.
    
-   <img src = "https://github.com/user-attachments/assets/d399cbe6-a6fe-4e4a-a563-69fd7c5b0278" style = "width:50%">
+<img src = "https://github.com/user-attachments/assets/d399cbe6-a6fe-4e4a-a563-69fd7c5b0278" style = "width:50%">
    
     - Apply this path, making `C` happy by matching it to `b`.
       
-   <img src = "https://github.com/user-attachments/assets/51dccb20-0635-4233-ade8-6d0feecd7343" style = "width:50%">
+<img src = "https://github.com/user-attachments/assets/51dccb20-0635-4233-ade8-6d0feecd7343" style = "width:50%">
     
     - Process `D` next. Start from `D` to find possible paths.
       
-   <img src = "https://github.com/user-attachments/assets/70584a63-6505-42e6-bcce-314f4eeec614" style = "width:50%">
+<img src = "https://github.com/user-attachments/assets/70584a63-6505-42e6-bcce-314f4eeec614" style = "width:50%">
 
     - If the path results in a negative score, revert and end the process. Here, the path has a score of -1, so we do not apply it.
 
