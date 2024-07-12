@@ -77,13 +77,11 @@ Here is a desired solution, with **green edges** representing the solution:
     - Next, choose `A` and then `b`. Since `b` has no blue or green edge, return this path.
    <img src = "https://github.com/user-attachments/assets/333ed95c-08f4-4e6a-894d-d0eabcecd428" style = "width:50%">
 
-    - Calculate the total score of the path. If it’s positive, apply the path to the graph; if not, ignore the path and revert the graph. The score here is +1, so we apply the path. Convert the edges along the path to green(when it was red before) or blue(when it was blue or black before) edges when it's from a creep to a position. When it's from a position to a creep, convert it back to the red(when it was red before) or black(for the rest) edges accordingly.
-      
-    ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/19f52d64-1b21-451a-9dc7-52fa88a6d209)
+    - Calculate the total score of the path. If it’s positive, apply the path to the graph; if not, ignore the path and revert the graph. The score here is +1, so we apply the path.
 
 4. **Update the Graph:**
-   
-    ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/0cb63d83-3703-4d9b-ae5b-f59a78a6982e)
+   - Convert the edges along the path to green(when it was red before) or blue(when it was blue or black before) edges when it's from a creep to a position. When it's from a position to a creep, convert it back to the red(when it was red before) or black(for the rest) edges accordingly.
+   <img src = "https://github.com/user-attachments/assets/f62d69b2-dee6-415c-951f-35acd26b926e" style = "width:50%">
    
     - The updated graph shows that `B` is now matched to its intended position `a`.
 
