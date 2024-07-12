@@ -105,7 +105,7 @@ Here is a desired solution, with **green edges** representing the solution:
 
 ### Final Solution:
 
-<img src = "https://github.com/user-attachments/assets/51dccb20-0635-4233-ade8-6d0feecd7343" style = "width:50%">
+<img src = "https://github.com/user-attachments/assets/09d7d5fa-ce28-4261-9123-60ca30ba8e8f" style = "width:50%">
 
 - **Result:** Move `Creep A` to `e`, `B` to `a`, `C` to `b`, and `D` stays in place (`d`).
 
