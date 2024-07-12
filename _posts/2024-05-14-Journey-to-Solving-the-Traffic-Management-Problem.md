@@ -87,26 +87,25 @@ Here is a desired solution, with **green edges** representing the solution:
 
 6. **Repeat for Remaining Creeps:**
     - Now, process `C`. Start from `C` to `b`, then go to `A`.
-      
-    ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/d2639755-01a1-484b-bb05-ce5aa708439c)
+   <img src = "https://github.com/user-attachments/assets/2fb21c16-3eb1-422f-9544-a7ebd5ecebb4" style = "width:50%">
    
     - At `A`, try different positions (`a`, `d`, `e`) until you find a successful path. In this case, `A` to `e` works.
    
-    ![image](https://github.com/sy-harabi/sy-harabi.github.io/assets/71678452/d0ed12ef-08f4-4800-acf8-b37443d466b3)
+   <img src = "https://github.com/user-attachments/assets/d399cbe6-a6fe-4e4a-a563-69fd7c5b0278" style = "width:50%">
    
     - Apply this path, making `C` happy by matching it to `b`.
       
-    ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/274809d2-a9ea-4e74-afab-f8cf430b45db)
+   <img src = "https://github.com/user-attachments/assets/51dccb20-0635-4233-ade8-6d0feecd7343" style = "width:50%">
     
     - Process `D` next. Start from `D` to find possible paths.
       
-    ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/47c78c5c-b1e0-44e5-83e1-3f5bf75b23a3)
+   <img src = "https://github.com/user-attachments/assets/70584a63-6505-42e6-bcce-314f4eeec614" style = "width:50%">
 
     - If the path results in a negative score, revert and end the process. Here, the path has a score of -1, so we do not apply it.
 
 ### Final Solution:
 
-![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/274809d2-a9ea-4e74-afab-f8cf430b45db)
+<img src = "https://github.com/user-attachments/assets/51dccb20-0635-4233-ade8-6d0feecd7343" style = "width:50%">
 
 - **Result:** Move `Creep A` to `e`, `B` to `a`, `C` to `b`, and `D` stays in place (`d`).
 
