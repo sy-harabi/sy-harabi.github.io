@@ -73,11 +73,11 @@ Here is a desired solution, with **green edges** representing the solution:
 
 3. **Finding Paths:**
     - Choose the edge from `B` to `a` and get a score of +1.
-    - 
+
 <img src = "https://github.com/user-attachments/assets/276aeb22-6e7b-49fe-8c44-5dd53fd9dcf8" style = "width:50%">
    
     - Next, choose `A` and then `b`. Since `b` has no blue or green edge, return this path.
-    - 
+
 <img src = "https://github.com/user-attachments/assets/333ed95c-08f4-4e6a-894d-d0eabcecd428" style = "width:50%">
 
     - Calculate the total score of the path. If it’s positive, apply the path to the graph; if not, ignore the path and revert the graph. The score here is +1, so we apply the path.
@@ -92,7 +92,7 @@ Here is a desired solution, with **green edges** representing the solution:
 6. **Repeat for Remaining Creeps:**
     - Now, process `C`. Start from `C` to `b`, then go to `A`.
 
-<img src = "https://github.com/user-attachments/assets/2fb21c16-3eb1-422f-9544-a7ebd5ecebb4" style = "width:50%; align:center">
+<img src = "https://github.com/user-attachments/assets/2fb21c16-3eb1-422f-9544-a7ebd5ecebb4" style = "width:50%>
    
     - At `A`, try different positions (`a`, `d`, `e`) until you find a successful path. In this case, `A` to `e` works.
    
