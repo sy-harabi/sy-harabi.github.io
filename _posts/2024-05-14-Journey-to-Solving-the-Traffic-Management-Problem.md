@@ -74,11 +74,11 @@ Here is a desired solution, with **green edges** representing the solution:
 3. **Finding Paths:**
     - Choose the edge from `B` to `a` and get a score of +1.
       
-    ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/bdf37a14-954d-4670-bc1f-42db558f50df)
+<img src = "https://github.com/user-attachments/assets/276aeb22-6e7b-49fe-8c44-5dd53fd9dcf8" style = "width:50%">
    
     - Next, choose `A` and then `b`. Since `b` has no blue or green edge, return this path.
       
-    ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/62261b25-7d04-4c9e-af34-ca19f44cd8f0)
+<img src = "https://github.com/user-attachments/assets/333ed95c-08f4-4e6a-894d-d0eabcecd428" style = "width:50%">
 
     - Calculate the total score of the path. If it’s positive, apply the path to the graph; if not, ignore the path and revert the graph. The score here is +1, so we apply the path. Convert the edges along the path to green(when it was red before) or blue(when it was blue or black before) edges when it's from a creep to a position. When it's from a position to a creep, convert it back to the red(when it was red before) or black(for the rest) edges accordingly.
       
