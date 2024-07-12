@@ -60,8 +60,8 @@ Here is a desired solution, with **green edges** representing the solution:
 
 1. **Start with Creep `B`** (since `A` has no intended position).
     - Delete the blue edge between `B` and `b`, then mark it as a black edge.
-  
-   ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/879f0017-34d7-4cc6-9142-ee1b5929de7d)
+
+  <img src = "https://github.com/user-attachments/assets/89f0f0db-5720-4d6b-bd02-2a2bf0292814" style = "width:50%">
 
     - Find a path following these rules:
         1. You must choose a red or black edge when moving from a creep to a position.
@@ -71,7 +71,7 @@ Here is a desired solution, with **green edges** representing the solution:
         5. When choosing a green edge, subtract -1 from the score.
         6. If you arrive at a position which don't have blue nor green edge, return the path.
 
-2. **Finding Paths:**
+3. **Finding Paths:**
     - Choose the edge from `B` to `a` and get a score of +1.
       
     ![image](https://github.com/sy-harabi/screeps_harabi/assets/71678452/bdf37a14-954d-4670-bc1f-42db558f50df)
