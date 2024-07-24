@@ -30,7 +30,6 @@ Planning the layout of your base in Screeps might seem unusual at first, but itâ
 9. **Establish Infrastructure**: Lay down roads from storage to energy sources and minerals. Place a container and a link at each source, and a container and an extractor at the mineral.
 ![8  roads to resources](https://github.com/user-attachments/assets/eba74c08-c41d-4c7d-8f05-52633f11b3ba)
 10. **Optimize Ramparts**: Utilize the minimum cut algorithm to determine optimal rampart positions, then connect them with roads. At this stage, I noticed my mistake I mentioned earlier and made the controller upgrade area to be closer to controller. The minimum cut code is available [here](https://github.com/sy-harabi/harabiBot_2024/blob/main/src/util_algorithm_mincut.js).
-
 ![10  roads to ramparts](https://github.com/user-attachments/assets/1114dd73-d54a-4f31-9ebc-da26b38f85ee)
 12. **Tower Placement**: Position towers to maximize their coverage. Personally, I prioritize maximizing the minimum damage of towers over base boundaries.
 ![11  towers](https://github.com/user-attachments/assets/e40d6a89-3fea-46a1-97bd-6e02599bf72f)
