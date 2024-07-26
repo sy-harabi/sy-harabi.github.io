@@ -13,7 +13,7 @@ Planning the layout of your base in Screeps might seem unusual at first, but itâ
 
 ## The Process
 
-1. **Utilize Distance Transform**: Start by employing the distance transform algorithm to identify open spaces in the room. Typically, my bot requires a 5x5 square to begin, so I target positions with a distance of 3 or larger. Some bots, especially those employing bunker-style base planners, may require squares larger than 10x10. Plan ahead for the desired size of your base. The distance transform code is available [here](https://github.com/sy-harabi/harabiBot_2024/blob/main/src/util_algorithm.js#L14).
+1. **Utilize Distance Transform**: Start by employing the distance transform algorithm to identify open spaces in the room. Typically, my bot requires a 5x5 square to begin, so I target positions with a distance of 3 or larger. Some bots, especially those employing bunker-style base planners, may require squares larger than 10x10. Plan ahead for the desired size of your base. The distance transform code is available [here](https://github.com/sy-harabi/screeps-algorithgm-utils/blob/33a0a406d86ed0a916d540340b3d07e3f5992065/utils.js#L10).
 
   ![1  distance transform](https://github.com/user-attachments/assets/fb8c5f03-9e0a-4579-82ff-a21a124a5380)
 
@@ -29,7 +29,7 @@ Planning the layout of your base in Screeps might seem unusual at first, but itâ
 
   ![4  upgrade area](https://github.com/user-attachments/assets/7b300577-b6a7-4a92-bfe4-28af168811cb)
 
-5. **Implement Floodfill Algorithm**: Utilize the floodfill algorithm to categorize tiles by their accessibility. Lower numbers indicate proximity to core structures. The floodfill code is available [here](https://github.com/sy-harabi/harabiBot_2024/blob/main/src/util_algorithm.js#L100).
+5. **Implement Floodfill Algorithm**: Utilize the floodfill algorithm to categorize tiles by their accessibility. Lower numbers indicate proximity to core structures. The floodfill code is available [here](https://github.com/sy-harabi/screeps-algorithgm-utils/blob/33a0a406d86ed0a916d540340b3d07e3f5992065/utils.js#L115).
 
   ![5  flood fill](https://github.com/user-attachments/assets/93ff0067-7c19-40c4-9835-65a4d8caf371)
 
@@ -45,7 +45,7 @@ Planning the layout of your base in Screeps might seem unusual at first, but itâ
 
   ![8  roads to resources](https://github.com/user-attachments/assets/eba74c08-c41d-4c7d-8f05-52633f11b3ba)
 
-10. **Optimize Ramparts**: Utilize the minimum cut algorithm to determine optimal rampart positions, then connect them with roads. At this stage, I noticed my mistake I mentioned earlier and made the controller upgrade area to be closer to controller. The minimum cut code is available [here](https://github.com/sy-harabi/harabiBot_2024/blob/main/src/util_algorithm_mincut.js).
+10. **Optimize Ramparts**: Utilize the minimum cut algorithm to determine optimal rampart positions, then connect them with roads. At this stage, I noticed my mistake I mentioned earlier and made the controller upgrade area to be closer to controller. The minimum cut code is available [here](https://github.com/sy-harabi/screeps-algorithgm-utils/blob/33a0a406d86ed0a916d540340b3d07e3f5992065/utils.js#L204).
 
   ![10  roads to ramparts](https://github.com/user-attachments/assets/1114dd73-d54a-4f31-9ebc-da26b38f85ee)
 
