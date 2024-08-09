@@ -79,11 +79,11 @@ Now, let's get into the calculations necessary for selecting which sources to mi
 Here are more precise explanations. We will not consider the center rooms and source keeper rooms since we're talking about early game.
 
 1. `Energy generated per tick = (owned || reserved) ? 10 : 5 `
-2. `Energy used to spawn miners = (cost of miner body composition you use considering energy per tick) / CREEP_LIFE_TIME` where CREEP_LIFE_TIME = 1,500.
-3. `Number of CARRY parts you need = (Energy generated per tick) * 2 * (traveling distance to the source) / CARRY_CAPACITY`. Where CARRY_CAPACITY = 50.
+2. `Energy used to spawn miners = (cost of miner body composition you use considering energy per tick) / CREEP_LIFE_TIME` where `CREEP_LIFE_TIME = 1,500`.
+3. `Number of CARRY parts you need = (Energy generated per tick) * 2 * (traveling distance to the source) / CARRY_CAPACITY`. Where `CARRY_CAPACITY = 50`.
 4. `Energy used to spawn haulers = (Number of CARRY parts you need) * (using roads? 75 : 100) / CREEP_LIFE_TIME`
 5. `Energy used to repair containers = owned ? 1 : 0.5`
-6. `Energy used to spawn reservers = 650 / CREEP_LIFE_TIME` where CREEP_CLAIM_LIFE_TIME = 650. We are assuming to use 1 CLAIM part and 1 MOVE part for all the time.
+6. `Energy used to spawn reservers = 650 / CREEP_LIFE_TIME` where `CREEP_CLAIM_LIFE_TIME = 650`. We are assuming to use 1 CLAIM part and 1 MOVE part for all the time.
 
 You can omit the last two terms if not applicable.
 
