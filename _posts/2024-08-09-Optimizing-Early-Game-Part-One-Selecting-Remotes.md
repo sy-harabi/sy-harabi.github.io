@@ -12,6 +12,8 @@ comments: true
 
 Hello! Recently, I've been working on optimizing the early game economy for my new bot. I managed to reach RCL 5 in just under 15,900 ticks, which is a significant improvement from my previous record of 16,900 ticks. If you're curious about how I did it, check out this [YouTube video](https://youtu.be/JBAmxd6hq_o?si=D3pd0PAb9RgTWVAQ).
 
+![Thumbnail](https://github.com/user-attachments/assets/9d2cc685-b27e-4bde-b3cc-b499ed92d2dc){: width="50%"}
+
 Now, I'd like to share the strategies that helped me achieve this milestone. While some aspects are a bit complex, the overall approach is fairly straightforward. Let’s dive in.
 
 ## 1. Key Constraints
@@ -24,10 +26,14 @@ The main constraint in optimizing the early game economy is spawn time. Since yo
   - **Haulers:** Transport harvested energy to where it's needed, such as storage, spawn or extensions.
   - **Upgraders/Builders:** Use the transported energy to upgrade the controller or construct structures.
 
+![Creeps](https://github.com/user-attachments/assets/a1fe3a13-e8d3-42ff-b27f-2f6d1facfcb2){: width="50%"}
+
 Other important creeps include:
 
 - **Reservers:** Reserve controllers to increase energy production.
 - **Porters:** Withdraw energy from storage and refill the spawn and extensions.
+
+![Creeps2](https://github.com/user-attachments/assets/dfba322b-4cd8-4507-b2dd-607fbb866b06){: width="50%"}
 
 ## 2. Basic Strategy
 
@@ -80,6 +86,8 @@ Again, omit the last term if not applicable.
 ### C. Adjusted Spawn Usage Considering Upgraders
 
 This might seem odd, but more income means more upgraders. Increase spawn usage by the amount needed to spawn upgraders. Add spawn usage approximately `net income × (1~2)` more parts, depending on your upgrader body composition.
+
+For calculation, you can check out this [Screeps wiki article](https://wiki.screepspl.us/index.php/Remote_Harvesting).
 
 ## 6. Selecting Remotes
 
