@@ -145,11 +145,15 @@ for i from 0 to N-1 do:
 
 This is a basic example. You can modify the code to consider individual sources within each remote or to avoid using a remote if there’s no accessible path between it and your main room.
 
-If you want to see a real example, you can check out my code [here](https://github.com/sy-harabi/harabiBot_early_eco_example/blob/d185cd2716b8e7cee1bd126e94e64f7241f513d3/src/manageSource.js#L1189).
+If you want to see a real example, you can check out my code [here](https://github.com/sy-harabi/harabiBot_early_eco_example/blob/6fb4ffa5c4546b47e5a91a8a1e0e95e2d610a8a1/src/manageSource.js#L1200).
 
 ## Conclusion
 In many cases, simply selecting remotes from closest to farthest while monitoring spawn time works well. However, in edge cases—like the one shown below—dynamic programming can offer better results. In this scenario, my bot initially selected the red remote (14), but after implementing dynamic programming, it switched to the blue remotes (14 and 15), which was a more efficient choice.
 
 <img src = "https://github.com/user-attachments/assets/8820cc20-573b-47b7-ad87-c163758e992f" style = "width:100%">
+
+
+If you want to test my bot on your own, the codebase you can use is [here](https://github.com/sy-harabi/harabiBot_early_eco_example).
+Note that it's not that fast compared to the version I used for speedrun. Since I patched several features from that version for late game. But I think it can still reach rcl5 under 20k for sure, in the room W7N3 of default map.
 
 Stay tuned for more insights in the next part of this series!
