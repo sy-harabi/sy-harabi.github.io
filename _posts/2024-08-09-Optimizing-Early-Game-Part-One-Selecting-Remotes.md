@@ -67,7 +67,7 @@ Now, let's get into the calculations necessary for selecting which sources to mi
 
 ### A. Net Income for Sources
 
-Net income = Energy generated per tick - Energy used to spawn miners - Energy used to spawn haulers - Energy used to repair containers - Energy used to spawn reservers. 
+`Net income = Energy generated per tick - Energy used to spawn miners - Energy used to spawn haulers - Energy used to repair containers - Energy used to spawn reservers` 
 
 You can omit the last two terms if not applicable.
 
