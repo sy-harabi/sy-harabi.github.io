@@ -111,7 +111,7 @@ Finally, let's talk about remote selection, which is similar to the knapsack pro
 
 1. **Objective:** Select remotes without exceeding spawn usage while maximizing net income.
 2. **Value and Weight:** Net income is the value, and spawn usage is the weight.
-3. **Maximum Weight(Spawn time)** You can have a maximum of 500 parts. You have to lower this number if you want to spawn other creeps like porters. And it's usually good to have some buffer since it's hard to make spawning perfect.
+3. **Maximum Weight(Spawn usage)** You can have a maximum of 500 parts. You have to lower this number if you want to spawn other creeps like porters. And it's usually good to have some buffer since it's hard to make spawning perfect.
 
 By applying dynamic programming, you can find the best combination of remotes. Here’s a simple pseudo-code example:
 
