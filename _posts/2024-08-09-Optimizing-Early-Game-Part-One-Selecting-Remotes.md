@@ -128,4 +128,6 @@ If you want to see a real example, you can check out my code [here](https://gith
 ## Conclusion
 In many cases, simply selecting remotes from closest to farthest while monitoring spawn time works well. However, in edge cases—like the one shown below—dynamic programming can offer better results. In this scenario, my bot initially selected the red remote (14), but after implementing dynamic programming, it switched to the blue remotes (14 and 15), which was a more efficient choice.
 
+![1. Example](https://github.com/user-attachments/assets/8820cc20-573b-47b7-ad87-c163758e992f){: width="50%"}
+
 Stay tuned for more insights in the next part of this series!
