@@ -92,17 +92,15 @@ You can omit the last two terms if not applicable.
 `Spawn usage = Spawn time for miners + Spawn time for haulers + Spawn time for reservers` 
 
 Agaan, here are more precise explanations
-1. `Spawn time for miners = number of body parts you used for miner considering energy per tick`
+1. `Spawn time for miners = (number of body parts you used for miner considering energy per tick) * CREEP_LIFE_TIME / (CREEP_LIFE_TIME - (traveling distance to the source))`
 2. `Spawn time for haulers = (Number of Carry parts you need) * (using roads? 1.5 : 2)`
-3. `Spawn time for reservers = 2 * CREEP_LIFE_TIME / CREEP_CLAIM_LIFE_TIME`. Notice that we should consider that reservers has short lifetime.
+3. `Spawn time for reservers = 2 * CREEP_LIFE_TIME / (CREEP_LIFE_TIME - (traveling distance to the controller))`. Notice that we should consider that reservers has short lifetime.
 
 Again, omit the last term if not applicable.
 
 ### C. Adjusted Spawn Usage Considering Upgraders
 
 This might seem odd, but more income means more upgraders. Increase spawn usage by the amount needed to spawn upgraders. Add spawn usage approximately `net income × (1~2)` more parts, depending on your upgrader body composition.
-
-For calculation, you can check out this [Screeps wiki article](https://wiki.screepspl.us/index.php/Remote_Harvesting).
 
 ## 6. Selecting Remotes
 
