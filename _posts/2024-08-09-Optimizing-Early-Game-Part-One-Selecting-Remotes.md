@@ -59,7 +59,7 @@ Closer sources are more efficient because they require fewer haulers. Prioritize
 
 ## 4. Why Selecting Remotes?
 
-As I said earlier, balancing earning vs using is important. And at the same time, we should spawn miners and haulers before we start to spawn upgraders. Then how can we know when is the time to stop spawning miners and haulers and start to spawn upgraders? To know that, we should do some calculation and decide how many sources we should harvest.
+As mentioned earlier, balancing energy production (earning) and energy consumption (using) is crucial. At the same time, it's important to prioritize spawning miners and haulers before transitioning to spawning upgraders. But how do we determine when it's time to stop spawning miners and haulers and start focusing on upgraders? To make this decision, we need to perform some calculations to determine the optimal number of sources to harvest.
 
 ## 5. Calculation
 
