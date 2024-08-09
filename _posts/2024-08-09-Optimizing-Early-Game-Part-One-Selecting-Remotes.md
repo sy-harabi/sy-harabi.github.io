@@ -57,6 +57,10 @@ Closer sources are more efficient because they require fewer haulers. Prioritize
 4. Hauler.
 5. Upgraders and builders once all miners and haulers are spawned.
 
+## 4. Why Selecting Remotes?
+
+As I said earlier, balancing earning vs using is important. And at the same time, we should spawn miners and haulers before we start to spawn upgraders. Then how can we know when is the time to stop spawning miners and haulers and start to spawn upgraders? To know that, we should do some calculation and decide how many sources we should harvest.
+
 ## 4. Calculation
 
 Now, let's get into the calculations necessary for selecting which sources to mine. The goal is to balance ambition with practicality—aim too high and you'll stagnate, aim too low and you won't progress much. Here’s what you need to calculate:
