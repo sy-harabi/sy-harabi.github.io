@@ -155,6 +155,6 @@ In many cases, simply selecting remotes from closest to farthest while monitorin
 
 
 If you want to test my bot on your own, the codebase you can use is [here](https://github.com/sy-harabi/harabiBot_early_eco_example).
-Note that it's not that fast compared to the version I used for speedrun. Since I patched several features from that version for late game. But I think it can still reach rcl5 under 20k for sure, in the room W7N3 of default map.
+Note that it's not that fast compared to the version I used for speedrun, since I patched several features from that version for late game. But I think it can still reach rcl5 under 20k for sure, in the room W7N3 of default map.
 
 Stay tuned for more insights in the next part of this series!
