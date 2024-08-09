@@ -21,7 +21,7 @@ The main constraint in optimizing the early game economy is spawn time. Since yo
 - You can spawn 500 parts over 1,500 ticks, meaning you can have a maximum of 500 parts at any given time. Most of the time, your spawn will produce one of these creeps:
 
   - **Miners:** Harvest energy from sources throughout their lifespan.
-  - **Haulers:** Transport harvested energy to where it's needed, such as storage or spawn extensions.
+  - **Haulers:** Transport harvested energy to where it's needed, such as storage, spawn or extensions.
   - **Upgraders/Builders:** Use the transported energy to upgrade the controller or construct structures.
 
 Other important creeps include:
