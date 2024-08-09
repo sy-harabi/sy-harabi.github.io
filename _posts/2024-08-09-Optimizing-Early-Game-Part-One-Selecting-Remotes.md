@@ -83,7 +83,7 @@ Here are more precise explanations. We will not consider the center rooms and so
 3. `Number of CARRY parts you need = (Energy generated per tick) * 2 * (traveling distance to the source) / CARRY_CAPACITY`. Where `CARRY_CAPACITY = 50`.
 4. `Energy used to spawn haulers = (Number of CARRY parts you need) * (using roads? 75 : 100) / CREEP_LIFE_TIME`
 5. `Energy used to repair containers = owned ? 1 : 0.5`
-6. `Energy used to spawn reservers = 650 / (CREEP_LIFE_TIME - (traveling distance to the controller))` where `CREEP_CLAIM_LIFE_TIME = 600`. We are assuming to use 1 CLAIM part and 1 MOVE part for all the time.
+6. `Energy used to spawn reservers = 650 / (CREEP_CLAIM_LIFE_TIME - (traveling distance to the controller))` where `CREEP_CLAIM_LIFE_TIME = 600`. We are assuming to use 1 CLAIM part and 1 MOVE part for all the time.
 
 You can omit the last two terms if not applicable.
 
@@ -95,7 +95,7 @@ Again, here are more precise explanations:
 
 1. `Spawn time for miners = (number of body parts you used for miner considering energy per tick) * CREEP_LIFE_TIME / (CREEP_LIFE_TIME - (traveling distance to the source))`
 2. `Spawn time for haulers = (Number of Carry parts you need) * (using roads? 1.5 : 2)`
-3. `Spawn time for reservers = 2 * CREEP_LIFE_TIME / (CREEP_LIFE_TIME - (traveling distance to the controller))`. Notice that we should consider that reservers have a shorter lifetime.
+3. `Spawn time for reservers = 2 * CREEP_CLAIM_LIFE_TIME / (CREEP_CLAIM_LIFE_TIME - (traveling distance to the controller))`. Notice that we should consider that reservers have a shorter lifetime.
 
 Again, omit the last term if not applicable.
 
