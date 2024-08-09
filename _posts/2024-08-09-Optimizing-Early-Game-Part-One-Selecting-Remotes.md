@@ -31,8 +31,8 @@ The main constraint in optimizing the early game economy is spawn time. Since yo
 
 Other important creeps include:
 
-- **Reservers:** Reserve controllers to increase energy production.
 - **Porters:** Withdraw energy from storage and refill the spawn and extensions.
+- **Reservers:** Reserve controllers to increase energy production.
 
 <img src = "https://github.com/user-attachments/assets/dfba322b-4cd8-4507-b2dd-607fbb866b06" style = "width:100%">
 
