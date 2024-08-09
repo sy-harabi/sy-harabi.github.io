@@ -10,31 +10,31 @@ comments: true
 
 # Optimizing Early Game Economy – Part 1: Selecting Remotes
 
-Hello! Recently, I've been working on optimizing the early game economy for my new bot. I managed to reach RCL 5 in just under 15,900 ticks, which is a significant improvement from my previous record of 16,900 ticks. If you're curious about how I did it, check out this [YouTube video](https://youtu.be/JBAmxd6hq_o?si=D3pd0PAb9RgTWVAQ).
+Hello! Recently, I've been working on optimizing the early game economy for my new bot. I managed to reach RCL 5 in just under 15,900 ticks, a significant improvement from my previous record of 16,900 ticks. If you're curious about how I did it, check out this [YouTube video](https://youtu.be/JBAmxd6hq_o?si=D3pd0PAb9RgTWVAQ).
 
-<img src = "https://github.com/user-attachments/assets/9d2cc685-b27e-4bde-b3cc-b499ed92d2dc" style = "width:100%" >
-
+<img src="https://github.com/user-attachments/assets/9d2cc685-b27e-4bde-b3cc-b499ed92d2dc" style="width:100%">
 
 Now, I'd like to share the strategies that helped me achieve this milestone. While some aspects are a bit complex, the overall approach is fairly straightforward. Let’s dive in.
 
 ## 1. Key Constraints
 
-The main constraint in optimizing the early game economy is spawn time. Since you only have one spawn, it's crucial to use it wisely. To break it down:
+The primary constraint in optimizing the early game economy is spawn time. Since you only have one spawn, it's crucial to use it wisely. Here’s a breakdown:
 
-- You can spawn 500 parts over 1,500 ticks, meaning you can have a maximum of 500 parts at any given time. Most of the time, your spawn will produce one of these creeps:
+- **Spawn Rate:** You can spawn 500 parts over 1,500 ticks, meaning you can have a maximum of 500 parts at any given time.
+- **Creep Types:** Most of the time, your spawn will produce one of these creeps:
 
   - **Miners:** Harvest energy from sources throughout their lifespan.
-  - **Haulers:** Transport harvested energy to where it's needed, such as storage, spawn or extensions.
+  - **Haulers:** Transport harvested energy to where it's needed, such as storage, spawn, or extensions.
   - **Upgraders/Builders:** Use the transported energy to upgrade the controller or construct structures.
 
-<img src = "https://github.com/user-attachments/assets/a1fe3a13-e8d3-42ff-b27f-2f6d1facfcb2" style = "width:100%">
+<img src="https://github.com/user-attachments/assets/a1fe3a13-e8d3-42ff-b27f-2f6d1facfcb2" style="width:100%">
 
 Other important creeps include:
 
 - **Porters:** Withdraw energy from storage and refill the spawn and extensions.
 - **Reservers:** Reserve controllers to increase energy production.
 
-<img src = "https://github.com/user-attachments/assets/dfba322b-4cd8-4507-b2dd-607fbb866b06" style = "width:100%">
+<img src="https://github.com/user-attachments/assets/dfba322b-4cd8-4507-b2dd-607fbb866b06" style="width:100%">
 
 ## 2. Basic Strategy
 
@@ -70,15 +70,15 @@ As mentioned earlier, balancing energy production (earning) and energy consumpti
 
 ## 5. Calculation
 
-Now, let's get into the calculations necessary for selecting which sources to mine. The goal is to balance ambition with practicality—aim too high and you'll stagnate, aim too low and you won't progress much. Here’s what you need to calculate:
+Now, let's get into the calculations necessary for selecting which sources to mine. The goal is to balance ambition with practicality—aim too high and you'll stagnate; aim too low and you won't progress much. Here’s what you need to calculate:
 
 ### A. Net Income for Sources
 
-`Net income = Energy generated per tick - Energy used to spawn miners - Energy used to spawn haulers - Energy used to repair containers - Energy used to spawn reservers` 
+`Net income = Energy generated per tick - Energy used to spawn miners - Energy used to spawn haulers - Energy used to repair containers - Energy used to spawn reservers`
 
-Here are more precise explanations. We will not consider the center rooms and source keeper rooms since we're talking about early game.
+Here are more precise explanations. We will not consider the center rooms and source keeper rooms since we're talking about the early game.
 
-1. `Energy generated per tick = (owned || reserved) ? 10 : 5 `
+1. `Energy generated per tick = (owned || reserved) ? 10 : 5`
 2. `Energy used to spawn miners = (cost of miner body composition you use considering energy per tick) / (CREEP_LIFE_TIME - (traveling distance to the source))` where `CREEP_LIFE_TIME = 1,500`.
 3. `Number of CARRY parts you need = (Energy generated per tick) * 2 * (traveling distance to the source) / CARRY_CAPACITY`. Where `CARRY_CAPACITY = 50`.
 4. `Energy used to spawn haulers = (Number of CARRY parts you need) * (using roads? 75 : 100) / CREEP_LIFE_TIME`
@@ -89,12 +89,13 @@ You can omit the last two terms if not applicable.
 
 ### B. Spawn Usage for Sources
 
-`Spawn usage = Spawn time for miners + Spawn time for haulers + Spawn time for reservers` 
+`Spawn usage = Spawn time for miners + Spawn time for haulers + Spawn time for reservers`
 
-Agaan, here are more precise explanations
+Again, here are more precise explanations:
+
 1. `Spawn time for miners = (number of body parts you used for miner considering energy per tick) * CREEP_LIFE_TIME / (CREEP_LIFE_TIME - (traveling distance to the source))`
 2. `Spawn time for haulers = (Number of Carry parts you need) * (using roads? 1.5 : 2)`
-3. `Spawn time for reservers = 2 * CREEP_LIFE_TIME / (CREEP_LIFE_TIME - (traveling distance to the controller))`. Notice that we should consider that reservers has short lifetime.
+3. `Spawn time for reservers = 2 * CREEP_LIFE_TIME / (CREEP_LIFE_TIME - (traveling distance to the controller))`. Notice that we should consider that reservers have a shorter lifetime.
 
 Again, omit the last term if not applicable.
 
