@@ -100,7 +100,7 @@ By applying dynamic programming, you can find the best combination of remotes. H
 // Number of distinct remotes N (s has length N)
 // Knapsack capacity W (maximum spawn usage for remotes)
 
-array m[0, 1, 2, …, W]
+array m[0, 1, 2, … , W]
 result array r[0, 1, 2, … , W]
 
 for i from 0 to W do:
