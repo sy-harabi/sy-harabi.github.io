@@ -61,7 +61,7 @@ Closer sources are more efficient because they require fewer haulers. Prioritize
 
 As I said earlier, balancing earning vs using is important. And at the same time, we should spawn miners and haulers before we start to spawn upgraders. Then how can we know when is the time to stop spawning miners and haulers and start to spawn upgraders? To know that, we should do some calculation and decide how many sources we should harvest.
 
-## 4. Calculation
+## 5. Calculation
 
 Now, let's get into the calculations necessary for selecting which sources to mine. The goal is to balance ambition with practicality—aim too high and you'll stagnate, aim too low and you won't progress much. Here’s what you need to calculate:
 
@@ -81,7 +81,7 @@ Again, omit the last term if not applicable.
 
 This might seem odd, but more income means more upgraders. Increase spawn usage by the amount needed to spawn upgraders. For every 1,500 ticks, spawn approximately net income × (1~2) more parts, depending on your upgrader body composition.
 
-## 5. Selecting Remotes
+## 6. Selecting Remotes
 
 Finally, let's talk about remote selection, which is similar to the knapsack problem—a well-known issue in computer science. Typically, dynamic programming is used to solve the knapsack problem. If you’re unfamiliar with this, check out this [Wikipedia article](https://en.wikipedia.org/wiki/Knapsack_problem).
 
