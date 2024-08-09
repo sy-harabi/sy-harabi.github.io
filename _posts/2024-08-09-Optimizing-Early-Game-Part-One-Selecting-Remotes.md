@@ -8,8 +8,6 @@ toc_sticky: true
 comments: true
 ---
 
-# Optimizing Early Game Economy – Part 1: Selecting Remotes
-
 Hello! Recently, I've been working on optimizing the early game economy for my new bot. I managed to reach RCL 5 in just under 15,900 ticks, a significant improvement from my previous record of 16,900 ticks. If you're curious about how I did it, check out this [YouTube video](https://youtu.be/JBAmxd6hq_o?si=D3pd0PAb9RgTWVAQ).
 
 <img src="https://github.com/user-attachments/assets/9d2cc685-b27e-4bde-b3cc-b499ed92d2dc" style="width:100%">
