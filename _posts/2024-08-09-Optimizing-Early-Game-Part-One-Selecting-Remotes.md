@@ -73,7 +73,7 @@ You can omit the last two terms if not applicable.
 
 ### B. Spawn Usage for Sources
 
-Spawn usage = Spawn time for miners + Spawn time for haulers + Spawn time for reservers. 
+`Spawn usage = Spawn time for miners + Spawn time for haulers + Spawn time for reservers` 
 
 Again, omit the last term if not applicable.
 
