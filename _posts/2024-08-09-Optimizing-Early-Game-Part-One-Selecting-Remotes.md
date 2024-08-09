@@ -76,11 +76,25 @@ Now, let's get into the calculations necessary for selecting which sources to mi
 
 `Net income = Energy generated per tick - Energy used to spawn miners - Energy used to spawn haulers - Energy used to repair containers - Energy used to spawn reservers` 
 
+Here are more precise explanations we will not consider the center rooms and source keeper rooms since we're talking about early game.
+
+1. `Energy generated per tick` is 10 when it's in your owned room or being reserved, 5 when it's normal room and not being reserved.
+2. `Energy used to spawn miners = (cost of miner body composition you use considering energy per tick) / CREEP_LIFE_TIME` where CREEP_LIFE_TIME = 1,500.
+3. `Number of CARRY parts you need = (Energy generated per tick) * 2 * (traveling distance to the source) / CARRY_CAPACITY`. Where CARRY_CAPACITY = 50.
+4. 'Energy used to spawn haulers = (Number of CARRY parts you need) * (using roads? 75 : 100) / CREEP_LIFE_TIME`
+5. `Energy used to repair containers = owned ? 1 : 0.5`
+6. `Energy used to spawn reservers = 650/CREEP_LIFE_TIME` assuming using 1 CLAIM part and 1 MOVE part for all the time.
+
 You can omit the last two terms if not applicable.
 
 ### B. Spawn Usage for Sources
 
 `Spawn usage = Spawn time for miners + Spawn time for haulers + Spawn time for reservers` 
+
+Agaan, here are more precise explanations
+1. `Spawn time for miners = number of body parts you used for miner considering energy per tick`
+2. `Spawn time for haulers = (Number of Carry parts you need) * (using roads? 1.5 : 2)`
+3. `Spawn time for reservers = 2 * CREEP_LIFE_TIME / CREEP_CLAIM_LIFE_TIME`. Notice that we should consider that reservers has short lifetime.
 
 Again, omit the last term if not applicable.
 
