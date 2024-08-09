@@ -79,7 +79,7 @@ Again, omit the last term if not applicable.
 
 ### C. Adjusted Spawn Usage Considering Upgraders
 
-This might seem odd, but more income means more upgraders. Increase spawn usage by the amount needed to spawn upgraders. Add spawn usage approximately net income × (1~2) more parts, depending on your upgrader body composition.
+This might seem odd, but more income means more upgraders. Increase spawn usage by the amount needed to spawn upgraders. Add spawn usage approximately `net income × (1~2)` more parts, depending on your upgrader body composition.
 
 ## 6. Selecting Remotes
 
