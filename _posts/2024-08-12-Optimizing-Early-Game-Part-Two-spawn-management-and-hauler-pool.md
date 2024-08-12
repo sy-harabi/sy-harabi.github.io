@@ -8,7 +8,7 @@ toc_sticky: true
 comments: true
 ---
 
-Hello everyone! In my previous article, I discussed how to effectively select remotes to optimize the early game economy. Now that we've covered that, it’s time to dive into spawn management and hauler pool optimization. With the right strategy, we can streamline the spawning process and ensure our haulers are operating at peak efficiency.
+Hello everyone! In my [previous article](https://sy-harabi.github.io/Optimizing-Early-Game-Part-One-Selecting-Remotes/)  , I discussed how to effectively select remotes to optimize the early game economy. Now that we've covered that, it’s time to dive into spawn management and hauler pool optimization. With the right strategy, we can streamline the spawning process and ensure our haulers are operating at peak efficiency.
 
 <img src="https://github.com/user-attachments/assets/38943367-abe4-4c88-9a9a-4b6ced12e785" style="width:100%">
 
