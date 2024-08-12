@@ -80,9 +80,9 @@ Without storage, the balance requires more delicate management:
 
 This adaptive strategy helps maintain a balance between energy production and consumption when storage is not available.
 
-I visualized this metric using in-game methods.
-
 <img src="https://github.com/user-attachments/assets/9a509e86-3b4e-47da-a55f-9b844ca8c0d9" style="width:100%">
+
+(I visualized this metric using in-game methods.)
 
 ## 3. Hauler Pool Management
 
