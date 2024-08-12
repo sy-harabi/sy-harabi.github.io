@@ -92,14 +92,10 @@ To decide where a hauler should go, we need to estimate the energy available at 
 
 1. **Energy Piled Up:** Calculate the sum of energy in containers and any dropped energy near the source.
 2. **Expected Energy Gain:** Determine the expected energy gain based on travel distance:
-   - **If the distance is less than or equal to the ticks left for regeneration:**  
-   \[
-   \text{Expected Energy} = \min(\text{Energy Left in Source}, \text{Miner Harvest Power} \times \text{Distance})
-   \]
-   - **If the distance is greater than the ticks left for regeneration:**  
-   \[
-   \text{Expected Energy} = \min(\text{Energy Left in Source}, \text{Miner Harvest Power} \times \text{Distance}) + (\text{Miner Harvest Power} \times (\text{Distance} - \text{Ticks to Regeneration}))
-   \]
+   - **If the distance is less than or equal to the ticks left for regeneration:**
+     ```Expected Energy Gain = min(energy left in source, miner harvest power * distance)```
+   - **If the distance is greater than the ticks left for regeneration:**
+     ```Expected Energy Gain = min(energy left in source, miner harvest power * distance) + (miner harvest power) * (distance – ticks to regeneration)```
 
 3. **Adjust for Hauler Traffic:** Reduce the expected energy by the amount likely to be taken by other haulers heading to the source.
 4. **Select the Optimal Source:** Choose the closest source with enough expected energy.
