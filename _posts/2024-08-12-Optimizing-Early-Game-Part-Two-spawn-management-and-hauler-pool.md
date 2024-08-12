@@ -94,10 +94,10 @@ To decide where a hauler should go, we need to estimate the energy available at 
 2. **Expected Energy Gain:** Determine the expected energy gain based on travel distance:
    - **If the distance is less than or equal to the ticks left for regeneration:**
 
-      ```Expected Energy Gain = min(energy left in source, miner harvest power * distance)```
+      ```Expected Energy Gain = min(energy piled, harvest power * distance)```
    - **If the distance is greater than the ticks left for regeneration:**
 
-      ```Expected Energy Gain = min(energy left in source, miner harvest power * distance) + (miner harvest power) * (distance – ticks to regeneration)```
+      ```Expected Energy Gain = min(energy piled, harvest power * distance) + (harvest power) * (distance – ticks to regeneration)```
 
 
 3. **Adjust for Hauler Traffic:** Reduce the expected energy by the amount likely to be taken by other haulers heading to the source.
