@@ -10,6 +10,8 @@ comments: true
 
 Hello everyone! In my previous article, I discussed how to effectively select remotes to optimize the early game economy. Now that we've covered that, it’s time to dive into spawn management and hauler pool optimization. With the right strategy, we can streamline the spawning process and ensure our haulers are operating at peak efficiency.
 
+<img src="https://github.com/user-attachments/assets/38943367-abe4-4c88-9a9a-4b6ced12e785" style="width:100%">
+
 ## 1. Spawning Creeps
 
 ### A. Spawn Management System Overview
@@ -54,6 +56,9 @@ When spawning earning creeps like miners, haulers, and reservers (or source keep
 5. **Update Hauler Count:** Reduce the remaining hauler count by the number required for the current source.
 6. **Proceed to the Next Source:** Continue to the next source until all are adequately serviced.
 
+<img src="https://github.com/user-attachments/assets/a6159625-8a0e-4bc2-ad96-1ec259b3820b">
+Iterate from source number 1 to source number 9
+
 ## 2. Balancing Earning vs. Using Creeps
 
 Balancing the spawning of earning creeps (miners and haulers) with using creeps (upgraders and builders) is critical, but the strategy differs depending on whether you have storage.
@@ -76,6 +81,7 @@ This adaptive strategy helps maintain a balance between energy production and co
 
 I visualized this metric using in-game methods.
 
+<img src="https://github.com/user-attachments/assets/9a509e86-3b4e-47da-a55f-9b844ca8c0d9" style="width:100%">
 
 ## 3. Hauler Pool Management
 
