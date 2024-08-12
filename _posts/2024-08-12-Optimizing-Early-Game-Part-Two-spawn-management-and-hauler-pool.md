@@ -57,7 +57,8 @@ When spawning earning creeps like miners, haulers, and reservers (or source keep
 6. **Proceed to the Next Source:** Continue to the next source until all are adequately serviced.
 
 <img src="https://github.com/user-attachments/assets/a6159625-8a0e-4bc2-ad96-1ec259b3820b">
-Iterate from source number 1 to source number 9
+
+(Iterate from source number 1 to source number 9)
 
 ## 2. Balancing Earning vs. Using Creeps
 
