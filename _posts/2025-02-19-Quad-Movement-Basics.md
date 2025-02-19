@@ -10,6 +10,8 @@ comments: true
 
 ## Quad Movement basics
 
+![Quads](https://github.com/user-attachments/assets/0ef80919-6ed1-4476-b905-6b6691a7454d)
+
 Let’s make basic quad movement today!
 
 The rough idea is simple:
@@ -29,6 +31,8 @@ The most tricky part is adjusting the cost matrix, but it’s not as hard as it 
 ### Step 1: Spawn Four Creeps
 
 First, spawn four creeps.
+
+![3  spawn 4 creeps](https://github.com/user-attachments/assets/e1dc3ea0-e6dc-4c2f-afe1-6a30425e4db5)
 
 ```javascript
 Game.spawns["Spawn1"].spawnCreep([MOVE], "Quad1")
@@ -52,6 +56,8 @@ Next, you need to find some square area to pack those creeps. This can be done b
 
 ...are all empty.
 
+![4  find area to form](https://github.com/user-attachments/assets/cfec820d-8b30-4be1-8db4-936b34b41883)
+
 #### Important:
 
 You should remember that area until the creeps are all packed together. Searching for a new area every tick could make your quad fall into an infinite loop.
@@ -67,6 +73,8 @@ creep4.moveTo(new RoomPosition(topLeftPos.x + 1, topLeftPos.y + 1, roomName))
 ```
 
 Now you have four creeps perfectly packed into a square!
+
+![5  gather creeps](https://github.com/user-attachments/assets/2110fd30-6346-4f4f-befc-a068606eb9ff)
 
 To ensure your creeps are packed, you can create a helper function:
 
@@ -96,6 +104,12 @@ Now, it’s time to adjust the cost matrix for quad movement.
 - Create a modified cost matrix that accounts for the fact that the quad occupies a 2x2 area, not a single tile.
 
 ---
+
+From this
+![1  default cost matrix](https://github.com/user-attachments/assets/baf857ec-c9a5-46e6-ab08-27fd395b4aa0)
+
+To this
+![2  quad cost matrix](https://github.com/user-attachments/assets/71c4f8f8-14bd-46b5-b1d1-173c3346d8f0)
 
 #### Example: Cost Matrix Transformation
 
@@ -175,6 +189,8 @@ const path = PathFinder.search(
 ### Step 5: Move the Quad
 
 Once you have a path, make each creep follow the path, staying in formation. A simple way is to find the direction from the path and move all creeps in that direction:
+
+![Desktop 2025 02 19 - 14 11 26 02 DVR_4](https://github.com/user-attachments/assets/56d97fd6-788d-416b-bf2e-382580b7c957)
 
 ```javascript
 const direction = topLeftPos.getDirectionTo(path[0])
