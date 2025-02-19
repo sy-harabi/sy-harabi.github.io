@@ -10,7 +10,7 @@ comments: true
 
 ## Quad Movement basics
 
-![Desktop 2025 02 19 - 14 11 26 02 DVR_5](https://github.com/user-attachments/assets/73121e2f-593e-4146-b4f0-d7e3f05d3362)
+![Quadss](https://github.com/user-attachments/assets/4b20a53c-8101-4e48-a4cb-857a08d4e513)
 
 In Screeps, quads play a crucial role, especially when attacking rooms with high RCL. Using only duos can make it really challenging to take on an RCL8 room. Today, I’ll introduce the basics of quad movement. 
 
