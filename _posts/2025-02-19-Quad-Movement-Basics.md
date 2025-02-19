@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "How I Wrote Active Defender Code"
+title: "Quad Movement Basics"
 
 toc: true
 toc_sticky: true
