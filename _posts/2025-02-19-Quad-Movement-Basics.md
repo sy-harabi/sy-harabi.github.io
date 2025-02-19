@@ -32,14 +32,14 @@ The most tricky part is adjusting the cost matrix, but it’s not as hard as it 
 
 First, spawn four creeps.
 
-![3  spawn 4 creeps](https://github.com/user-attachments/assets/e1dc3ea0-e6dc-4c2f-afe1-6a30425e4db5)
-
 ```javascript
 Game.spawns["Spawn1"].spawnCreep([MOVE], "Quad1")
 Game.spawns["Spawn1"].spawnCreep([MOVE], "Quad2")
 Game.spawns["Spawn1"].spawnCreep([MOVE], "Quad3")
 Game.spawns["Spawn1"].spawnCreep([MOVE], "Quad4")
 ```
+
+![3  spawn 4 creeps](https://github.com/user-attachments/assets/e1dc3ea0-e6dc-4c2f-afe1-6a30425e4db5)
 
 Now you have four creeps!
 
@@ -72,9 +72,9 @@ creep3.moveTo(new RoomPosition(topLeftPos.x, topLeftPos.y + 1, roomName))
 creep4.moveTo(new RoomPosition(topLeftPos.x + 1, topLeftPos.y + 1, roomName))
 ```
 
-Now you have four creeps perfectly packed into a square!
-
 ![5  gather creeps](https://github.com/user-attachments/assets/2110fd30-6346-4f4f-befc-a068606eb9ff)
+
+Now you have four creeps perfectly packed into a square!
 
 To ensure your creeps are packed, you can create a helper function:
 
