@@ -105,13 +105,9 @@ Now, it’s time to adjust the cost matrix for quad movement.
 
 ---
 
-From this
+![Adjust costs](https://github.com/user-attachments/assets/06278438-3933-433d-9819-ed91c227b95a)
 
-![1  default cost matrix](https://github.com/user-attachments/assets/baf857ec-c9a5-46e6-ab08-27fd395b4aa0)
-
-To this
-
-![2  quad cost matrix](https://github.com/user-attachments/assets/71c4f8f8-14bd-46b5-b1d1-173c3346d8f0)
+See how the cost in the red circle has changed!
 
 #### Example: Cost Matrix Transformation
 
