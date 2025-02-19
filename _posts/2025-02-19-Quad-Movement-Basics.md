@@ -186,9 +186,10 @@ const path = PathFinder.search(
 
 ### Step 5: Move the Quad
 
+![Desktop 2025 02 19 - 14 11 26 02 DVR_4](https://github.com/user-attachments/assets/56d97fd6-788d-416b-bf2e-382580b7c957)
+
 Once you have a path, make each creep follow the path, staying in formation. A simple way is to find the direction from the path and move all creeps in that direction:
 
-![Desktop 2025 02 19 - 14 11 26 02 DVR_4](https://github.com/user-attachments/assets/56d97fd6-788d-416b-bf2e-382580b7c957)
 
 ```javascript
 const direction = topLeftPos.getDirectionTo(path[0])
