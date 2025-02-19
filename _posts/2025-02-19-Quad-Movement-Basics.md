@@ -238,6 +238,8 @@ for each creep in creeps:
 
 ### Challenges to Improve Quad Movement
 
+Now that you've mastered the basics of quad movement, it's time to tackle some more advanced challenges. Try these out and feel free to reach out if you encounter any issues or want to share your solutions! You can ping me (Harabi) on the official Screeps Discord.
+
 - Path caching to avoid redundant calculations.
 - More efficient methods for packing creeps into formation.
 - Avoiding collisions with enemy creeps.
