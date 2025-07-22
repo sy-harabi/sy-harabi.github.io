@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Quad Movement Basics"
+title: "8 Pro Tips to Supercharge Your Energy Income in Screeps"
 
 toc: true
 toc_sticky: true
