@@ -18,6 +18,8 @@ This guide covers 8 essential tips, from fundamental principles to advanced stra
 
 ### 1. Specialize with Static Miners and Haulers
 
+![1  Miners and Haulers](https://github.com/user-attachments/assets/3356785f-b309-4f0c-8d71-a967d822de71)
+
 One of the first and most impactful changes you can make is to stop using general-purpose worker creeps. A single creep with `WORK`, `CARRY`, and `MOVE` parts is inherently inefficient. When it's mining, its `CARRY` parts are idle. When it's hauling, its `WORK` parts are useless. You're paying for parts that aren't being used half the time.
 
 The solution is to specialize your creeps into two distinct roles:
@@ -29,11 +31,15 @@ This division of labor is the foundation of a scalable economy.
 
 ### 2. Expand with Remote Mining
 
+![2  Remotes](https://github.com/user-attachments/assets/c98345c9-5892-4717-8191-9445f8069e62)
+
 Once you've optimized harvesting in your home room, you'll quickly hit a hard cap. A standard room has at most two energy sources, limiting your income to 20 energy per tick. To grow beyond this, you must look to adjacent, neutral rooms.
 
 **Remote mining**—sending your specialized miners and haulers to harvest sources in nearby rooms—is the single most effective way to boost your early-game energy income. More sources harvested means more energy for your empire.
 
 ### 3. Build Infrastructure: Containers and Roads
+
+![3  Building roads](https://github.com/user-attachments/assets/ab9228e8-0e32-4762-b97a-9e08f88654da)
 
 To support your specialized creeps, you need infrastructure. **Containers and roads** are non-negotiable for an efficient operation.
 
@@ -55,6 +61,8 @@ Your miners are relatively cheap, but the cost of hauling energy over long dista
 
 ### 6. (Advanced) Harvest Source Keeper Rooms
 
+![4  Source keeper](https://github.com/user-attachments/assets/6413af27-0038-4724-8793-f7c9025662b8)
+
 Once one of your rooms reaches **Room Controller Level 7 (RCL 7)**, you can unlock a new tier of energy income: **Source Keeper (SK) rooms**.
 
 Sources in these hostile rooms are 33% richer, regenerating 4,000 energy every 300 ticks instead of the standard 3,000. As an added bonus, the hostile Source Keeper NPCs that guard these sources drop energy in their tombstones when killed.
@@ -68,6 +76,8 @@ As your logistics network grows, assigning dedicated haulers to a single source 
 The solution is a **hauler pool**. Instead of dedicated assignments, you treat all your haulers as a single, uniform group. A central system dynamically assigns any available hauler to any container that needs servicing. This provides incredible flexibility, reduces the total number of haulers needed, and minimizes waste. While more complex to code, the efficiency gains are enormous.
 
 ### 8. Monitor Everything with Visuals
+
+![5  visuals](https://github.com/user-attachments/assets/5771ae69-77b9-429f-aec7-582895ce81b3)
 
 You can't optimize what you can't see. Screeps provides excellent tools for monitoring your economy at a glance.
 
