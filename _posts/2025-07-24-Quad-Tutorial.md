@@ -155,7 +155,7 @@ Before moving toward your target (usually the `invaderCore`), check whether the 
 - If any creep is expected to take more damage than can be healed, **retreat**.
 
 A simple retreat logic:  
-→ Remember which direction you entered the room from. If in danger, move back to that exit.
+* Remember which direction you entered the room from. If in danger, move back to that exit.
 
 ```js
 function shouldRetreat(room, creeps, totalHealPower) {
