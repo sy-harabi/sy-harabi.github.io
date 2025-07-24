@@ -250,13 +250,14 @@ Now, use the destruction cost matrix to find a path to the invader core.
 
 With this setup, you should be able to take down a Level 1 Stronghold using a basic quad. But this is just the beginning. Here are some ideas to take your system further:
 
-1. Detect danger more precisely and proactively, considering enemy creeps.
-2. Improve retreat logic.
-3. Change targets if something goes wrong.
-4. Use `RMA` (Ranged Mass Attack) to destroy enemy structures more effectively.
-5. Create smarter healing strategies.
-6. Use multiple quads together without them getting stuck.
-7. Improve CPU efficiency by caching and reusing previously computed results.
+1. Boost your creeps for higher damage output and durability.
+2. Detect danger more precisely and proactively, considering enemy creeps.
+3. Improve retreat logic.
+4. Change targets if something goes wrong.
+5. Use `RMA` (Ranged Mass Attack) to destroy enemy structures more effectively.
+6. Create smarter healing strategies.
+7. Use multiple quads together without them getting stuck.
+8. Improve CPU efficiency by caching and reusing previously computed results.
 
 I’ll cover these advanced topics in future posts!
 
