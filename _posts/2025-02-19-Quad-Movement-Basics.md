@@ -244,7 +244,7 @@ Now that you've mastered the basics of quad movement, it's time to tackle some m
 - More efficient methods for packing creeps into formation.
 - Avoiding collisions with enemy creeps.
 - Temporarily breaking formation to slip through narrow passages.
-- Inter-room traveling for long-range attacks or harvesting.
+- Inter-room traveling for entering and retreating.
 - Room edge handling to prevent getting stuck at exits.
 
 ---
