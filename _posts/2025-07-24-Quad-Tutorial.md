@@ -18,7 +18,7 @@ Once a stronghold is destroyed, Invaders and lesser Invader Cores stop spawning 
 
 Let’s dive in!
 
-This is a tutorial, so I’ll keep things as simple and easy to follow as possible. Once you understand the basics, you can add more features and refine your logic. I’ll post more tips about using quads soon—stay tuned!
+* This is a tutorial, so I’ll keep things as simple and easy to follow as possible. Once you understand the basics, you can add more features and refine your logic. I’ll post more tips about using quads soon—stay tuned!
 
 ---
 
@@ -33,6 +33,8 @@ To be safe, we’ll use **60 HEAL parts** across the quad. That means each creep
 - `15 HEAL`
 
 That gives your quad enough healing, mobility, and firepower to survive and take down the stronghold.
+
+* Please note: This is not an optimal strategy for destroying a stronghold—I'm simply using it for practice.
 
 ---
 
