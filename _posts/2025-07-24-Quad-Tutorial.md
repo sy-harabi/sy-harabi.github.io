@@ -54,7 +54,7 @@ Sounds simple, right? Let’s go through each part in detail.
 
 ## 🗡️ Attack Logic
 
-To keep it simple for now, just make each creep attack any enemy or structure within range 3 using `Creep.rangedAttack(target)`.
+To keep it simple for now, I'll just make each creep attack any enemy or structure within range 3. If you have your own better logic, use that!
 
 ```js
 for (const creep of creeps) {
