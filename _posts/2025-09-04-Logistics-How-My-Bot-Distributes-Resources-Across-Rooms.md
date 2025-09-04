@@ -8,8 +8,6 @@ toc_sticky: true
 comments: true
 ---
 
-# Logistics – How My Bot Distributes Resources Across Rooms  
-
 Today, I want to talk about logistics in Screeps.  
 A lot of players manage logistics on a **per-room basis**, where each room tries to keep resources balanced. While this approach works, I think it introduces some inefficiencies — like redundant `terminal.send` calls or even resource ping-pong between rooms.  
 
