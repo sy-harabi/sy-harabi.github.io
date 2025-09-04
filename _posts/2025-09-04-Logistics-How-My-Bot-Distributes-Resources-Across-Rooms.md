@@ -22,7 +22,7 @@ Here’s how that looks in practice:
 
 ## Market Strategy  
 
-I define a **threshold_per_room** for each mineral. For the empire, this becomes:  
+I define a `threshold_per_room` for each mineral. For the empire, this becomes:  
 
 ```
 threshold = threshold_per_room * myRooms.length
