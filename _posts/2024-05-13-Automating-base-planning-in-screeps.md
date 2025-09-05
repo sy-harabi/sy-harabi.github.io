@@ -49,7 +49,7 @@ Planning the layout of your base in Screeps might seem unusual at first, but itâ
 
    ![10  roads to ramparts](https://github.com/user-attachments/assets/1114dd73-d54a-4f31-9ebc-da26b38f85ee)
 
-10. **Tower Placement**: Position towers to maximize their coverage. Personally, I prioritize maximizing the minimum damage of towers over base boundaries.
+10. **Tower Placement**: Position towers to maximize their coverage. Personally, I prioritize maximizing the minimum damage of towers over base boundaries.  
 
    ![11  towers](https://github.com/user-attachments/assets/e40d6a89-3fea-46a1-97bd-6e02599bf72f)
 
