@@ -49,9 +49,10 @@ Planning the layout of your base in Screeps might seem unusual at first, but itâ
 
    ![10  roads to ramparts](https://github.com/user-attachments/assets/1114dd73-d54a-4f31-9ebc-da26b38f85ee)
 
-10. **Tower Placement**: Position towers to maximize their coverage. Personally, I prioritize maximizing the minimum damage of towers over base boundaries.  ![11  towers](https://github.com/user-attachments/assets/e40d6a89-3fea-46a1-97bd-6e02599bf72f)
+10. **Tower Placement**: Position towers to maximize their coverage. Personally, I prioritize maximizing the minimum damage of towers over base boundaries.
+    ![11  towers](https://github.com/user-attachments/assets/e40d6a89-3fea-46a1-97bd-6e02599bf72f)
 
-11. **Place Additional Structures**: Situate the factory, nuker, observer, and extensions. Placement for the observer is less critical, so anywhere works. At this stage, I changed lab position a bit and marked them as green square.  ![12  nuker, factory, observer, extensions](https://github.com/user-attachments/assets/c6e8da9c-9b8f-47f4-9972-131c51ffd832) 
+12. **Place Additional Structures**: Situate the factory, nuker, observer, and extensions. Placement for the observer is less critical, so anywhere works. At this stage, I changed lab position a bit and marked them as green square.  ![12  nuker, factory, observer, extensions](https://github.com/user-attachments/assets/c6e8da9c-9b8f-47f4-9972-131c51ffd832) 
 
 ## Examples and Visuals
 Here are some examples created by my bot. The upgrade area is marked with a yellow square, labs with a green square, and towers with a red square.
