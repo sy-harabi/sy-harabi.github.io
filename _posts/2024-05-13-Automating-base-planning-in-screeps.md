@@ -41,19 +41,19 @@ Planning the layout of your base in Screeps might seem unusual at first, but itâ
 
    ![7  labs](https://github.com/user-attachments/assets/553cfa99-8983-415a-a137-63b9ec336b82)
 
-9. **Establish Infrastructure**: Lay down roads from storage to energy sources and minerals. Place a container and a link at each source, and a container and an extractor at the mineral.
+8. **Establish Infrastructure**: Lay down roads from storage to energy sources and minerals. Place a container and a link at each source, and a container and an extractor at the mineral.
 
    ![8  roads to resources](https://github.com/user-attachments/assets/eba74c08-c41d-4c7d-8f05-52633f11b3ba)
 
-10. **Optimize Ramparts**: Utilize the minimum cut algorithm to determine optimal rampart positions, then connect them with roads. At this stage, I noticed my mistake I mentioned earlier and made the controller upgrade area to be closer to controller. The minimum cut code is available [here](https://github.com/sy-harabi/screeps-algorithgm-utils/blob/33a0a406d86ed0a916d540340b3d07e3f5992065/utils.js#L204).
+9. **Optimize Ramparts**: Utilize the minimum cut algorithm to determine optimal rampart positions, then connect them with roads. At this stage, I noticed my mistake I mentioned earlier and made the controller upgrade area to be closer to controller. The minimum cut code is available [here](https://github.com/sy-harabi/screeps-algorithgm-utils/blob/33a0a406d86ed0a916d540340b3d07e3f5992065/utils.js#L204).
 
    ![10  roads to ramparts](https://github.com/user-attachments/assets/1114dd73-d54a-4f31-9ebc-da26b38f85ee)
 
-11. **Tower Placement**: Position towers to maximize their coverage. Personally, I prioritize maximizing the minimum damage of towers over base boundaries.
+10. **Tower Placement**: Position towers to maximize their coverage. Personally, I prioritize maximizing the minimum damage of towers over base boundaries.
 
    ![11  towers](https://github.com/user-attachments/assets/e40d6a89-3fea-46a1-97bd-6e02599bf72f)
 
-12. **Place Additional Structures**: Situate the factory, nuker, observer, and extensions. Placement for the observer is less critical, so anywhere works. At this stage, I changed lab position a bit and marked them as green square.
+11. **Place Additional Structures**: Situate the factory, nuker, observer, and extensions. Placement for the observer is less critical, so anywhere works. At this stage, I changed lab position a bit and marked them as green square.
 
    ![12  nuker, factory, observer, extensions](https://github.com/user-attachments/assets/c6e8da9c-9b8f-47f4-9972-131c51ffd832)
 
