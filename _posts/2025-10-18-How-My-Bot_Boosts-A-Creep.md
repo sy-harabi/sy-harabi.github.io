@@ -71,7 +71,7 @@ Each request goes through three phases: **Gather → Prepare → Boost**.
    If the labs are currently running reactions, stop them first.
 
 2. **Courier transfers:**
-   Courier creeps transport the correct resources to the appropriate labs.
+   Courier creep transport the correct resources to the appropriate labs.
 
 3. **Batch preparation:**
    If there are multiple boost requests, try to prepare all of them — again from the oldest to the newest.
