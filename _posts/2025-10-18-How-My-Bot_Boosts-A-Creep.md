@@ -14,6 +14,8 @@ Boosting is one of the most important steps to becoming a veteran **Screeps** pl
 
 In this post, I’ll explain how my bot handles boosting from start to finish — including how it requests boosts, prepares resources, and executes the actual boosting process.
 
+<img width="967" height="628" alt="image" src="https://github.com/user-attachments/assets/1874f640-467e-48ec-8183-1a08bec4d030" />
+
 ---
 
 ## 1. Boost Request
