@@ -111,5 +111,3 @@ So that’s how my bot handles boosting — a full cycle from request to complet
 Once you’ve built a stable boosting pipeline, you’ll unlock a huge new layer of Screeps gameplay.
 Try spawning a boosted singleton with **tough** and **heal** boosts, and send it to your neighbor — it’s a great way to test your system (and maybe start a small war 😄).
 
-```
-```
