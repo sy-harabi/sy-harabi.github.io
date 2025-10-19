@@ -99,7 +99,7 @@ Here are a few lessons I learned the hard way:
 
 1. 📌 **Create boost request only when spawn returend OK** to avoid duplication.
 2. ✅ **Check if the target creep is alive** and waiting before starting the boost phase.
-3. ⚗️ **Select labs wisely** — prefer labs that already contain the required minerals, and skip those currently used for other resources.
+3. ⚗️ **Select labs wisely** — prefer labs that already contain the required minerals or that are being used as reaction labs.
 4. ⚡ **Don’t forget energy** — labs need energy as well as minerals to perform the boost!
 5. 🔄 **Handle failures** — if something goes wrong, return to the gather or prepare phase instead of getting stuck.
 6. 🤝 **For duos or quads**, make the creeps that spawn first get renewed until all teammates are ready.
@@ -112,5 +112,5 @@ Here are a few lessons I learned the hard way:
 So that’s how my bot handles boosting — a full cycle from request to completion, with recovery in case of failure.
 
 Once you’ve built a stable boosting pipeline, you’ll unlock a huge new layer of Screeps gameplay.
-Try spawning a boosted singleton with **tough** and **heal** boosts, and send it to your neighbor — it’s a great way to test your system (and maybe start a small war 😄).
+Try spawning a boosted singleton with **tough**, **ranged attack** and **heal** boosts, and send it to your neighbor — it’s a great way to test your system (and maybe start a small war 😄).
 
