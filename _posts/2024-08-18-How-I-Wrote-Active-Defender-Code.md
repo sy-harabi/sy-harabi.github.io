@@ -53,19 +53,17 @@ Spawning active defenders for each enemy creep is inefficient because enemies us
 
 ![FloodFill Example](https://github.com/user-attachments/assets/cb17acb0-4e64-4d73-b78f-507d0d05e238)
 
-2. **Initialize a Damage Map:** Create an empty object to store the expected damage for each outermost rampart position. You can use a two-dimensional object or calculate keys using the formula `50*y+x`.
+1. **Initialize a Damage Map:** Create an empty object to store the expected damage for each outermost rampart position. You can use a two-dimensional object or calculate keys using the formula `50*y+x`.
 
-3. **Assign Enemies to Ramparts:** For each enemy, determine the closest rampart (based on path length) using the flow field. Minimize diagonal moves, as these are less effective for blocking enemies from reaching the ramparts.
-
+1. **Assign Enemies to Ramparts:** For each enemy, determine the closest rampart (based on path length) using the flow field. Minimize diagonal moves, as these are less effective for blocking enemies from reaching the ramparts.
   ![Finding Closest Rampart](https://github.com/user-attachments/assets/dad9f6b4-d5ca-47bf-8947-9aa53e5ccf0a)
   This is good enough
-
   ![Prefer Straight Paths](https://github.com/user-attachments/assets/888e5b15-3c6f-43a0-8ad5-6e3d3c81f519)
   But this is better
 
-4. **Collect Adjacent Ramparts:** Gather all ramparts adjacent to the closest one (using Manhattan distance). Typically, this involves three ramparts. For each position, add the enemy creep's attack power to the damage map.
+1. **Collect Adjacent Ramparts:** Gather all ramparts adjacent to the closest one (using Manhattan distance). Typically, this involves three ramparts. For each position, add the enemy creep's attack power to the damage map.
 
-5. **Group Enemies:** Identify the outermost rampart position with the highest expected damage. Group all the enemy creeps that contributed to this rampart. Repeat steps 3.1.3 through 3.1.4 until no enemy creeps remain ungrouped.
+1. **Group Enemies:** Identify the outermost rampart position with the highest expected damage. Group all the enemy creeps that contributed to this rampart. Repeat steps 3.1.3 through 3.1.4 until no enemy creeps remain ungrouped.
 
 After grouping, you should see something like this:
 
