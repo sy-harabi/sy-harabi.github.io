@@ -57,11 +57,11 @@ Spawning active defenders for each enemy creep is inefficient because enemies us
 
 3. **Assign Enemies to Ramparts:** For each enemy, determine the closest rampart (based on path length) using the flow field. Minimize diagonal moves, as these are less effective for blocking enemies from reaching the ramparts.
 
-![Finding Closest Rampart](https://github.com/user-attachments/assets/dad9f6b4-d5ca-47bf-8947-9aa53e5ccf0a)
-This is good enough
+  ![Finding Closest Rampart](https://github.com/user-attachments/assets/dad9f6b4-d5ca-47bf-8947-9aa53e5ccf0a)
+  This is good enough
 
-![Prefer Straight Paths](https://github.com/user-attachments/assets/888e5b15-3c6f-43a0-8ad5-6e3d3c81f519)
-But this is better
+  ![Prefer Straight Paths](https://github.com/user-attachments/assets/888e5b15-3c6f-43a0-8ad5-6e3d3c81f519)
+  But this is better
 
 4. **Collect Adjacent Ramparts:** Gather all ramparts adjacent to the closest one (using Manhattan distance). Typically, this involves three ramparts. For each position, add the enemy creep's attack power to the damage map.
 
