@@ -50,8 +50,7 @@ Spawning active defenders for each enemy creep is inefficient because enemies us
 ### 3.1. Grouping Enemy Creeps
 
 1. **Flow Field Setup:** Start by generating a flow field from our outermost ramparts (collected in step 2.1). This involves running a full Dijkstra and caching the results. This method allows us to quickly determine the closest outermost rampart for each enemy without performing costly pathfinding for every enemy.
-
-![FloodFill Example](https://github.com/user-attachments/assets/cb17acb0-4e64-4d73-b78f-507d0d05e238)
+  ![FloodFill Example](https://github.com/user-attachments/assets/cb17acb0-4e64-4d73-b78f-507d0d05e238)
 
 1. **Initialize a Damage Map:** Create an empty object to store the expected damage for each outermost rampart position. You can use a two-dimensional object or calculate keys using the formula `50*y+x`.
 
