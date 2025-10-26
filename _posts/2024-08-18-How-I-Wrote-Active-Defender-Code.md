@@ -74,7 +74,12 @@ For each group, find the creep with the highest required damage calculated in st
 
 ## 4. How Should We Move Active Defenders Smoothly?
 
-The final challenge is moving and allocating your defenders effectively. Movement is a complex aspect of Screeps, but I’ve found a solution that works well. Check out [this video](https://github.com/user-attachments/assets/fb17d13c-21de-4198-a15b-5dc030221dce) for a demonstration. Pretty elegant, right?
+The final challenge is moving and allocating your defenders effectively. Movement is a complex aspect of Screeps, but I’ve found a solution that works well.
+<video controls width="100%">
+  <source src="https://github.com/user-attachments/assets/fb17d13c-21de-4198-a15b-5dc030221dce" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+Pretty elegant, right?
 
 ### 4.1. Movement Strategy
 
