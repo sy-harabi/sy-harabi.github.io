@@ -40,11 +40,9 @@ Managers serve two primary functions:
 
 | Manager               | Repetitive Responsibility                 | Mission Deployment Example |
 | :-------------------- | :---------------------------------------- | :------------------------- |
-| **Room Manager**      | Local infrastructure, mining, & upgrading | **Remote Defense Mission** |
+| **Room Manager**      | Local infrastructure, mining & upgrading | **Remote Defense Mission** |
 | **Combat Manager**    | Global threat assessment                  | **Total War Mission**      |
 | **Expansion Manager** | Room scouting & planning                  | **Claim Mission**          |
-
-By separating "keeping the lights on" from "achieving a goal," the bot remains stable while still being capable of sudden, aggressive shifts in strategy.
 
 ---
 
@@ -80,7 +78,7 @@ All coordination happens through **mission memory**. The guiding rule is simple:
 ### Example Decision Flow
 
 1.  A **Quad Mission** loses a creep and records the loss in its memory.
-2.  A **Siege Mission** observes the loss flag in its child Quad's memory and adapts future squad composition.
+2.  A **Siege Mission** observes the creep loss flag in its child Quad's memory and adapts future squad composition.
 3.  Continued poor results cause the siege to stagnate.
 4.  The **Total War Mission** observes the lack of progress across multiple Sieges and decides to pivot the empire's resources elsewhere.
 
@@ -115,7 +113,7 @@ Memory.missions["siege"]["W1N1"] = {
 
 The daily life of the bot follows a predictable cycle, moving from high-level observation down to individual action:
 
-1.  **Analyze:** **Managers** maintain the baseline bot functions and scan the world state (e.g., enemy empire strength) to identify strategic needs. 
+1.  **Analyze:** **Managers** maintain the baseline bot functions and scan the world state to identify strategic needs. 
 2.  **Deploy:** Based on the analysis, Managers spawn or update **Missions**. For example, the Combat Manager may deploy a `Total War` mission if a player is being mean. The `Total War` mission then recursively deploys several `Siege` missions toward that player's rooms. 
 3.  **Resolve:** High-level missions read the memory of their child missions to evaluate progress. For example, a `Siege` mission checks its `Quad` mission's results to see if the room's defenses are cracking.
 4.  **Act:** Missions update their own state and issue direct orders to their assigned **Creeps**. In this phase, a `Quad` mission calculates and reports how much damage it is dealing, feeding the loop for the next decision.
