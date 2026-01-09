@@ -48,7 +48,7 @@ Managers serve two primary functions:
 
 ## Missions: Goal-Oriented Execution
 
-While Managers are the "who," **Missions are the "what."** A mission represents a concrete objective with a clear success or failure condition.
+While Managers are the **"who,"** Missions are the **"what."** A mission represents a concrete objective with a clear success or failure condition.
 
 A useful mental model is chess:
 
