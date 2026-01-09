@@ -94,15 +94,15 @@ All missions are stored in a double-layered structure: `Memory.missions[type][id
 
 ```json
 Memory.missions["siege"]["W1N1"] = {
-  "type": "siege",
-  "id": "W1N1",
-  "targetRoom": "W1N1",
-  "childMissions": [
-    { "type": "quad", "id": "W1N1_17253400" }
+  type: "siege",
+  id: "W1N1",
+  targetRoomName: "W1N1",
+  childMissions: [
+    { type: "quad", id: "W1N1_17253400" }
   ],
-  "status": {
-    "isEffective": false,
-    "netDamage": -1500
+  status: {
+    isEffective: false,
+    netDamage: -1500
   }
 }
 ```
