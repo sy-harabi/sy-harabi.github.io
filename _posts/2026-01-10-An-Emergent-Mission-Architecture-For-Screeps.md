@@ -11,7 +11,7 @@ comments: true
 # An Emergent Mission Architecture for Screeps
 
 _How I structure my bot to handle strategy, warfare, and large-scale decisions without drowning in micro-management._
-1
+
 ---
 
 ## Why I Rewrote My Bot
