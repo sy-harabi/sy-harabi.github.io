@@ -92,7 +92,7 @@ All missions are stored in a double-layered structure: `Memory.missions[type][id
 
 ### Example
 
-```json
+```js
 Memory.missions["siege"]["W1N1"] = {
   type: "siege",
   id: "W1N1",
