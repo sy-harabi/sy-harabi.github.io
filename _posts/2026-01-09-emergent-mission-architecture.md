@@ -116,6 +116,6 @@ The daily life of the bot follows a predictable cycle, moving from high-level ob
 1.  **Analyze:** **Managers** maintain the baseline bot functions and scan the world state to identify strategic needs. 
 2.  **Deploy:** Based on the analysis, Managers spawn or update **Missions**. For example, the Combat Manager may deploy a `Total War` mission if a player is being mean. The `Total War` mission then recursively deploys several `Siege` missions toward that player's rooms. 
 3.  **Resolve:** High-level missions read the memory of their child missions to evaluate progress. For example, a `Siege` mission checks its `Quad` mission's results to see if the room's defenses are cracking.
-4.  **Act:** Missions update their own state and issue direct orders to their assigned **Creeps**. In this phase, a `Quad` mission calculates and reports how much damage it is dealing, feeding the loop for the next decision.
+4.  **Act:** Missions update their own state and issue direct orders to their assigned **Creeps**. In this phase, a `Quad` mission control creeps and reports how much damage it is dealing, feeding the loop for the next decision making.
 
 This sequence ensures that **execution remains local**, while **evaluation remains strategic**.
