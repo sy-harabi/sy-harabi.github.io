@@ -109,6 +109,8 @@ Memory.missions["siege"]["W1N1"] = {
 }
 ```
 
+---
+
 ## The Execution Loop
 
 The daily life of the bot follows a predictable cycle, moving from high-level observation down to individual action:
