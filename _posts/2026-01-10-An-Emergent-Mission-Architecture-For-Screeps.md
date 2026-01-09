@@ -22,173 +22,100 @@ Like many Screeps players, my first bot grew organically: creeps made local deci
 
 When I rewrote my bot, I committed to two guiding ideas:
 
-1. **Top-down control**: Creeps don't decide _why_ they act. They only execute _how_.
-2. **Emergent hierarchy**: High-level goals should naturally decompose into smaller ones without a rigid planner.
+1.  **Top-down control where it matters** Creeps shouldn’t decide _why_ they act. Higher-level systems should.
+2.  **Natural task decomposition** Large goals should break down into smaller ones without relying on a rigid planner.
 
-The result is a **mission-based architecture** inspired by Hierarchical Task Networks (HTN), but adapted specifically for Screeps.
-
----
-
-## The Core Idea: Missions as Strategists
-
-In this architecture, **missions are the thinking units**.
-
-A useful mental model is chess:
-
-- A **mission** is the chess player.
-- **Creeps** are the pieces.
-
-Creeps don't ask _"What should I do next?"_ Instead, missions decide goals and issue commands. Creeps simply execute those commands as efficiently as possible.
-
-This inversion—strategy above execution—simplifies reasoning about the bot.
+The result is a **mission-based architecture**, where Managers act as the brains of the empire and Missions act as the specialized tools they deploy.
 
 ---
 
-## High-Level Structure: Managers and Missions
+## High-Level Structure: Managers as the Highest Level
 
-At the top level, the bot is divided into **Managers** and **Missions**.
+In this architecture, **Managers are the highest-level actors**. They are persistent, "always-on" entities that bridge the gap between global state and specific action.
 
-### Managers: Strategic Observers
+Managers serve two primary functions:
 
-Managers does repetitive jobs, **observe global state** and decide _which missions should exist_.
+1.  **Maintenance:** They handle repetitive, baseline responsibilities (e.g., the Room Manager ensures the controller doesn't downgrade).
+2.  **Deployment:** They act as the "commanders" who decide when the situation requires a specialized Mission.
 
-Typical managers include:
+| Manager               | Repetitive Responsibility                 | Mission Deployment Example |
+| :-------------------- | :---------------------------------------- | :------------------------- |
+| **Room Manager**      | Local infrastructure, mining, & upgrading | **Remote Defense Mission** |
+| **Combat Manager**    | Global threat assessment                  | **Total War Mission**      |
+| **Expansion Manager** | Room scouting & planning                  | **Claim Mission**          |
 
-- **Room Manager** – Handles internal room needs (mining, building, upgrading) and deploys small external missions like remote defense.
-- **Intel Manager** – Scans the world, tracks enemies, and maintains strategic visibility.
-- **Spawn Manager** – Centralized creep request handling and spawn queue management.
-- **Mission Manager** – Owns mission lifecycles: creation, execution, and cleanup.
-- **Combat Manager** – Evaluates enemy players and decides whether war is justified.
-- **Expansion Manager** – Chooses when and where to claim or abandon rooms.
-
-Managers think in terms of _conditions_ and _intent_, not movement or combat.
+By separating "keeping the lights on" from "achieving a goal," the bot remains stable while still being capable of sudden, aggressive shifts in strategy.
 
 ---
 
 ## Missions: Goal-Oriented Execution
 
-A **mission** represents a concrete objective, usually scoped outside of your core rooms.
+While Managers are the "who," **Missions are the "what."** A mission represents a concrete objective with a clear success or failure condition.
 
-Examples:
+A useful mental model is chess:
 
-- Attack a room
-- Defend against an invader
-- Harvest a power bank
-- Claim a new room
+- The **Manager** is the chess player.
+- The **Mission** is the specific opening or strategy being executed.
+- **Creeps** are the pieces.
 
-Each mission:
+### Recursive Decomposition (The Mission Chain)
 
-- Owns its assigned creeps
-- Orchestrates sub-missions if needed
-- Reports results upward through structured memory
+Missions are most powerful when they spawn sub-missions. This allows for complex behavior to emerge from simple, nested logic. A high-level mission defines the _intent_, while its children handle the _tactics_.
 
-### Emergent Hierarchy in Practice
+**Example Mission Chain:**
+`Total War` -> `Siege` -> `Quad`
 
-Missions do not have hard-coded tiers, but hierarchies naturally form:
-
-1. **Total War Mission** (Goal: Remove a player) $\rightarrow$ Deploys multiple **Siege Missions**.
-2. **Siege Mission** (Goal: Attack a specific room) $\rightarrow$ Deploys several **Quad Missions**.
-3. **Quad Mission** (Goal: Tactical combat) $\rightarrow$ Spawns and controls the actual creeps.
-
-Each layer focuses on a different level of abstraction. High-level missions never issue move commands, and low-level missions never decide _why_ the fight exists.
+1.  **Total War (deployed by Combat Manager):** Tracks the overall economic drain on the enemy and decides which rooms to pressure.
+2.  **Siege:** Focuses on a specific room, managing staging points and wall-breaking progress.
+3.  **Quad:** A tactical unit mission that spawns and handles four creeps in formation to execute the siege's goals.
 
 ---
 
-## How Missions Communicate (Without Chaos)
+## How Missions Communicate
 
-All communication happens through **mission memory**.
+All coordination happens through **mission memory**. The guiding rule is simple:
 
-A strict rule keeps the system sane:
-
-> **Missions may read other missions' memory, but never write to it.**
-
-This enables **two-way communication without two-way mutation**.
-
-- **Parent → Child (intent flow)**  
-  Child missions can read parent mission memory to understand:
-  - strategic intent
-  - constraints
-  - current state (safeModed, breached, enemy quad exists, etc.)
-
-  Based on this information, a child mission may *change its own behavior*.
-
-- **Child → Parent (outcome flow)**  
-  Parent missions read child mission memory to observe:
-  - effectiveness
-  - losses
-  - progress metrics
-
-  Parents then decide whether to reinforce, adapt tactics, switch targets, or terminate the mission entirely.
-
-This closely mirrors real-world *mission command*: higher-level units provide intent, lower-level units act autonomously, and outcomes are reported upward—without anyone rewriting someone else’s orders.
-
----
+> **A mission may read any mission’s memory, but may only write to its own.**
 
 ### Example Decision Flow
 
-1. A **Quad Mission** loses a creep and records the event.
-2. The parent **Siege Mission** observes reduced effectiveness and adapts future quad composition.
-3. If overall damage trends remain negative, the Siege Mission reports failure.
-4. The **Total War Mission** decides whether to escalate, retarget, or end the war entirely.
+1.  A **Quad Mission** loses a creep and records the loss in its memory.
+2.  A **Siege Mission** observes the loss flag in its child Quad's memory and adapts future squad composition.
+3.  Continued poor results cause the siege to stagnate.
+4.  The **Total War Mission** observes the lack of progress across multiple Sieges and decides to pivot the empire's resources elsewhere.
 
-No mission ever directly commands another mission. Strategy emerges from observation.
+No explicit reporting or signaling is required—coordination emerges from shared observation of state.
 
 ---
 
 ## Mission Memory Structure
 
-All missions live in a double-layered structure:
-
-```
-Memory.missions[type][id]
-```
+All missions are stored in a double-layered structure: `Memory.missions[type][id]`. This allows for fast lookups and easy iteration.
 
 ### Example
 
-```js
+```json
 Memory.missions["siege"]["W1N1"] = {
-  type: "siege",
-  id: "W1N1",
-  targetRoom: "W1N1",
-  childMissions: [
-    { type: "quad", id: "W1N1_17253400" },
-    { type: "quad", id: "W1N1_17253550" },
+  "type": "siege",
+  "id": "W1N1",
+  "targetRoom": "W1N1",
+  "childMissions": [
+    { "type": "quad", "id": "W1N1_17253400" }
   ],
-  status: {
-    isEffective: false,
-    netDamage: -1500,
-  },
+  "status": {
+    "isEffective": false,
+    "netDamage": -1500
+  }
 }
 ```
 
-Missions describe _what happened_, not _what should be done next_.
+## The Execution Loop
 
-## The Communication Loop
+The daily life of the bot follows a predictable cycle, moving from high-level observation down to individual action:
 
-Because every mission memory contains its own `type` and `id`, any mission can resolve references to its children (or parents) from anywhere in the codebase.
+1.  **Analyze:** **Managers** maintain the baseline bot functions and scan the world state (e.g., enemy empire strength) to identify strategic needs. 
+2.  **Deploy:** Based on the analysis, Managers spawn or update **Missions**. For example, the Combat Manager may deploy a `Total War` mission if a player is being mean. The `Total War` mission then recursively deploys several `Siege` missions toward that player's rooms. 
+3.  **Resolve:** High-level missions read the memory of their child missions to evaluate progress. For example, a `Siege` mission checks its `Quad` mission's results to see if the room's defenses are cracking.
+4.  **Act:** Missions update their own state and issue direct orders to their assigned **Creeps**. In this phase, a `Quad` mission calculates and reports how much damage it is dealing, feeding the loop for the next decision.
 
-During the `run()` phase of a high-level mission—such as a **Total War Mission**—the logic consistently follows the same four-step loop:
-
-1. **Analyze**
-   Iterate over the `childMissions` array stored in the mission’s own memory.
-
-2. **Access**
-   Use each child descriptor’s `type` and `id` to resolve the actual memory object at:
-
-   ```
-   Memory.missions[child.type][child.id]
-   ```
-
-3. **Evaluate**
-   Read the child mission’s reported `status` fields (for example, `isEffective` or `netDamage`).
-
-4. **Act**
-   If multiple children are failing, the parent mission decides the next strategic move—such as switching targets, or ending the campaign entirely.
-
-Crucially, **execution and evaluation are separated**:
-
-* **Execution** happens inside child missions (moving creeps, fighting, pathing).
-* **Evaluation** happens in parent missions (judging whether the approach is working).
-
-Because a mission only *reads* another mission's memory—and never mutates it—this loop remains stable, predictable, and easy to debug even as the hierarchy grows deeper.
-
+This sequence ensures that **execution remains local**, while **evaluation remains strategic**.
