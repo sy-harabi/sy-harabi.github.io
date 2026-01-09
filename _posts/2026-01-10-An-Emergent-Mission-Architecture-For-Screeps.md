@@ -22,7 +22,7 @@ Like many Screeps players, my first bot grew organically: creeps made local deci
 
 When I rewrote my bot, I committed to two guiding ideas:
 
-1. **Top-down control**: Creeps should not decide _why_ they act. They should only execute _how_.
+1. **Top-down control**: Creeps don't decide _why_ they act. They only execute _how_.
 2. **Emergent hierarchy**: High-level goals should naturally decompose into smaller ones without a rigid planner.
 
 The result is a **mission-based architecture** inspired by Hierarchical Task Networks (HTN), but adapted specifically for Screeps.
@@ -102,10 +102,27 @@ A strict rule keeps the system sane:
 
 > **Missions may read other missions' memory, but never write to it.**
 
-This enforces one-way information flow:
+This enables **two-way communication without two-way mutation**.
 
-- Children _report facts_
-- Parents _interpret meaning_
+- **Parent → Child (intent flow)**  
+  Child missions can read parent mission memory to understand:
+  - strategic intent
+  - constraints
+  - current state (safeModed, breached, enemy quad exists, etc.)
+
+  Based on this information, a child mission may *change its own behavior*.
+
+- **Child → Parent (outcome flow)**  
+  Parent missions read child mission memory to observe:
+  - effectiveness
+  - losses
+  - progress metrics
+
+  Parents then decide whether to reinforce, adapt tactics, switch targets, or terminate the mission entirely.
+
+This closely mirrors real-world *mission command*: higher-level units provide intent, lower-level units act autonomously, and outcomes are reported upward—without anyone rewriting someone else’s orders.
+
+---
 
 ### Example Decision Flow
 
@@ -173,5 +190,5 @@ Crucially, **execution and evaluation are separated**:
 * **Execution** happens inside child missions (moving creeps, fighting, pathing).
 * **Evaluation** happens in parent missions (judging whether the approach is working).
 
-Because parent missions only *read* child memory—and never mutate it—this loop remains stable, predictable, and easy to debug even as the hierarchy grows deeper.
+Because a mission only *reads* another mission's memory—and never mutates it—this loop remains stable, predictable, and easy to debug even as the hierarchy grows deeper.
 
