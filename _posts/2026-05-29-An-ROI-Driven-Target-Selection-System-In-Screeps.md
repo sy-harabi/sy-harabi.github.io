@@ -81,11 +81,7 @@ Because the bot uses a **Min-Heap** to evaluate targets, the candidate with the 
 
 ### The Distance Penalty
 
-The `Distance Penalty` scales the evaluation score logarithmically with the distance in rooms between our nearest spawn and the target's rooms:
-```
-Distance Penalty = 1 + Math.log10(minDistance)
-```
-This penalty ensures that distant bots are deprioritized relative to local threats, as deploying combat creeps over long routes is resource-intensive and strategically risky.
+To prevent the bot from launching costly campaigns halfway across the world map, a logarithmic penalty is applied based on the room distance between our nearest spawn and the target's territory. This penalty heavily prioritizes local hostiles, while scaling down the strategic priority of distant opponents to reflect the high resource costs and travel-time risks of long-range combat operations.
 
 ### Priority Multipliers
 
