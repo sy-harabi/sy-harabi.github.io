@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "An Emergent Mission Architecture for Screeps"
+title: "An ROI-Driven Target Selection System in Screeps: Balancing Threat and Elimination Cost"
 
 toc: true
 toc_sticky: true
