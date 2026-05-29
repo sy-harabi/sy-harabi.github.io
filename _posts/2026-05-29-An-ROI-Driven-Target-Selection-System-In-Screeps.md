@@ -1,4 +1,12 @@
+---
+layout: single
+title: "An Emergent Mission Architecture for Screeps"
 
+toc: true
+toc_sticky: true
+
+comments: true
+---
 
 # An ROI-Driven Target Selection System in Screeps: Balancing Threat and Elimination Cost
 
