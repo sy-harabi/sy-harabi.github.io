@@ -8,8 +8,6 @@ toc_sticky: true
 comments: true
 ---
 
-# An ROI-Driven Target Selection System in Screeps: Balancing Threat and Elimination Cost
-
 In Screeps, choosing which bot to attack is a critical high-level strategic decision. Common approaches to target selection vary widely: remaining entirely passive, declaring unconditional hostility toward everyone, picking targets at random, or focusing purely on the player with the highest raw hostility.
 
 This post introduces an alternative system based on the principle of Return on Investment (ROI). The objective is strictly economic: minimizing the total energy cost inflicted on my colony by external threats, resolved at the lowest possible resource expenditure.
