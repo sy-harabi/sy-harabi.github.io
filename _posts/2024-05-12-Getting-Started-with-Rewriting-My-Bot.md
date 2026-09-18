@@ -3,6 +3,12 @@ layout: single
 title: "Getting Started with Rewriting My Bot"
 toc: true
 toc_stickey: true
+
+categories:
+  - bot-design
+tags:
+  - architecture
+  - rewrite
 ---
 
 ## Why I Started to Rewrite

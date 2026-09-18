@@ -6,6 +6,12 @@ toc: true
 toc_sticky: true
 
 comments: true
+
+categories:
+  - guides
+tags:
+  - combat
+  - defense
 ---
 ## 1. Today's Subject
 

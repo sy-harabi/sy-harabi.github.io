@@ -6,6 +6,13 @@ toc: true
 toc_sticky: true
 
 comments: true
+
+categories:
+  - bot-design
+tags:
+  - logistics
+  - economy
+  - architecture
 ---
 
 # Logistics – How My Bot Distributes Resources Across Rooms

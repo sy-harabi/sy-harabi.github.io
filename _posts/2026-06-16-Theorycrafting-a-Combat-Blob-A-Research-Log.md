@@ -6,6 +6,13 @@ toc: true
 toc_sticky: true
 
 comments: true
+
+categories:
+  - research
+tags:
+  - combat
+  - movement
+  - theorycraft
 ---
 
 A **blob** is the least structured attack force in Screeps: a loose pack of combat creeps, no formation, that you shove at an enemy base and hope survives. No clever shape to hold, nothing to micro, *or so it looks*. Anyone who's tried it knows better. Keeping a blob alive on a defended room is one of the game's nastier movement problems, and I'd left it alone for a long time precisely because it looked too hard to be worth the trouble. What changed my mind was watching other players pull it off: the blobs droidFreak and iamgqr have been running lately were equal parts inspiration and a push to finally start.

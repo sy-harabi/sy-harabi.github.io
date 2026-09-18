@@ -6,6 +6,13 @@ toc: true
 toc_sticky: true
 
 comments: true
+
+categories:
+  - guides
+tags:
+  - boosting
+  - combat
+  - logistics
 ---
 
 # How My Bot Boosts a Creep – A Detailed Explanation for Beginners

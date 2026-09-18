@@ -6,6 +6,12 @@ toc: true
 toc_sticky: true
 
 comments: true
+
+categories:
+  - guides
+tags:
+  - base-planning
+  - algorithms
 ---
 
 ## Why Base Planning?

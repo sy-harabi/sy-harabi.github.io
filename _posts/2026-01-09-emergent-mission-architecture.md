@@ -6,6 +6,12 @@ toc: true
 toc_sticky: true
 
 comments: true
+
+categories:
+  - bot-design
+tags:
+  - architecture
+  - missions
 ---
 
 # An Emergent Mission Architecture for Screeps

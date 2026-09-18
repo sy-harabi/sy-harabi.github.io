@@ -6,6 +6,13 @@ toc: true
 toc_sticky: true
 
 comments: true
+
+categories:
+  - research
+tags:
+  - strategy
+  - combat
+  - optimization
 ---
 
 In Screeps, choosing which bot to attack is a critical high-level strategic decision. Common approaches to target selection vary widely: remaining entirely passive, declaring unconditional hostility toward everyone, picking targets at random, or focusing purely on the player with the highest raw hostility.

@@ -6,6 +6,12 @@ toc: true
 toc_sticky: true
 
 comments: true
+
+categories:
+  - guides
+tags:
+  - economy
+  - optimization
 ---
 
 # 8 Pro Tips to Supercharge Your Energy Income in Screeps

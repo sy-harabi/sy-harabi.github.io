@@ -6,6 +6,13 @@ toc: true
 toc_sticky: true
 
 comments: true
+
+categories:
+  - guides
+tags:
+  - combat
+  - quad
+  - stronghold
 ---
 
 # Quad Tutorial: Attack the Level 1 Stronghold!

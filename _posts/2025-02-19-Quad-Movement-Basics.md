@@ -6,6 +6,13 @@ toc: true
 toc_sticky: true
 
 comments: true
+
+categories:
+  - guides
+tags:
+  - combat
+  - movement
+  - quad
 ---
 
 ## Quad Movement basics
