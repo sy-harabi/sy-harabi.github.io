@@ -329,6 +329,8 @@ body {
    ========================================================================== */
 
 .page__taxonomy {
+  font-family: $global-font-family;
+
   .sep {
     display: none;
   }
@@ -356,6 +358,7 @@ body {
 .taxonomy__section {
   margin-bottom: 2em;
   padding-bottom: 1em;
+  font-family: $global-font-family;
 
   &:not(:last-child) {
     border-bottom: solid 1px $border-color;
@@ -386,6 +389,7 @@ body {
 
 .taxonomy__index {
   display: grid;
+  font-family: $global-font-family;
   grid-column-gap: 2em;
   grid-template-columns: repeat(2, 1fr);
   margin: 1.414em 0;
